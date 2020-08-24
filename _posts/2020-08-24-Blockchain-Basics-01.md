@@ -13,7 +13,7 @@ When you get down to it, these are fairly simple applications of some very compl
 
 Hash is delicious. A couple centuries ago, pubs would take all their scraps of meat, cheese, and potato from the previous day, fry it up with some strong seasonings and lots of salt, and serve it up as a cheap hot meal. Eventually, hash became a staple dish on both sides of the Atlantic, not just a way to make leftovers more paletable. Americans might know it best as corned beef hash, very finely-ground meat with diced potatoes and fried up for breakfast.
 
-What does this have to do with cryptography? Hash algorithms are named for the food. When you cook hash, you break down larger foods into small pieces, mix them up, add things, and serve up a portion of it that contains a little of everything but not the whole of anything. A hash algorithm does the same thing, taking some amount of data, breaking it into small pieces, mixing them up in a predictable way, and returning a much smaller piece of data that is influenced by every bit that went in, but doesn't have enough information to reconstruct the original data.
+What does this have to do with cryptography? Hash algorithms are named for the food. When you cook hash, you break down larger foods into small pieces, mix them up, add things, and serve up a portion of it that contains a little of everything but not the whole of anything. A hash algorithm does the same thing, taking some amount of data, breaking it into small pieces, mixing them up in a predictable way, and returning a piece of data that is influenced by every bit that went in, but doesn't have enough information to reconstruct the original data.
 
 ### A Simple Hash
 
