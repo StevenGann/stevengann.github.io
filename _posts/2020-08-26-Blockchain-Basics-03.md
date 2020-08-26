@@ -29,4 +29,9 @@ Over time, for reasons much too complex and political to get into here, the gold
 
 Fiat currency works because a trusted authority, i.e. the government, ensures the integrity of the monetary system and controls the supply to prevent the currency from becoming too easy to obtain and therefore less valuable, at least in theory. The issue is that the authority must be trusted to do a good job of this and sometimes that trust is misplaced. Situations like the hyperinflation of Zimbabwe's fiat currency show what can happen when that authority fails dramatically.
 
-THe killer feature of a cryptocurrency is that it is **trustless**. Trust in computing is a complex concept and cryptocurrencies are 
+The killer feature of a cryptocurrency is that it is **trustless**. Trust in computing is a complex concept and cryptocurrencies are trustless in several different ways. In the big picture, cryptocurrency is trustless in that the blockchain structure makes the entire system completely transparent, from the code implementation that makes it work to the nodes that provide the infrastructure. How much of a cryptocurrency exists is know to everyone, as well as how much everyone has and how much is being produced. Policy changes in a cryptocurrency's implementation are implemented democratically by nature because if nodes don't agree with the changes they will simply refuse the changes and become a hard fork in the blockchain.
+
+## Transaction Scene
+
+
+
