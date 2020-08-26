@@ -15,7 +15,8 @@ When you get down to it, these are fairly simple applications of some very compl
 
 A blockchain is, as the name implies, a chain of blocks. These blocks are just specially-constructed data structures that relate to each other in a sequence. A simple blockchain block may look like the following:
 
-```Csharp
+{% highlight Csharp %}
+
 public class Block   
 {
     public UInt64 Index        { get; set; }
@@ -23,7 +24,7 @@ public class Block
     public string PreviousHash { get; set; }    
     public string Data         { get; set; }
 }
-```
+{% endhighlight %}
 
 1. A unique index for the block
 2. A date and time stamp of when the block was created and added to the chain

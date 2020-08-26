@@ -18,21 +18,21 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+	background: $darkGray;
+  font: 18px/1.4 $bodyFont;
+  color: $lightGray;
 }
 
-.container {
+/*.container {
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
+  //max-width: 740px;
+  //padding: 0 10px;
   width: 100%;
-}
+}*/
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
+  font-family: $headerFont;
+  color: $lightGray;
   font-weight: bold;
 
   line-height: 1.7;
@@ -156,7 +156,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 2px solid $gray;
 
   @include mobile {
     text-align: center;
@@ -177,6 +177,7 @@ img {
 
   img {
     border-radius: 5px;
+    border: 1px solid $darkerGray;
   }
 }
 
@@ -192,9 +193,9 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $lightGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $headerFont;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -202,7 +203,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $lightGray;
   font-size: 16px;
 
   @include mobile {
@@ -213,7 +214,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: $headerFont;
   font-size: 18px;
 
   @include mobile {
@@ -225,7 +226,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $lightGray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -243,7 +244,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $gray;
 }
 
 .posts > .post:last-child {
@@ -275,13 +276,18 @@ nav {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: $darkGray;
 }
 
 footer {
   padding: 20px 0;
   text-align: center;
 }
+
+.debug-red {
+  border: 1px solid #f00;
+} 
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

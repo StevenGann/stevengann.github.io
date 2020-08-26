@@ -21,14 +21,14 @@ What does this have to do with cryptography? Hash algorithms are named for the f
 
 The simplest hash algorithm is probably a checksum. The algorithm is very, very simple:
 
-```Csharp
+{% highlight csharp %}
 byte[] data = System.Text.Encoding.ASCII.GetBytes("Very important information!");
 int sum = 0;
 for (int i = 0; i < data.Length; i++)
 {
     sum = sum + data[i];
 }
-```
+{% endhighlight %}
 
 Running this code returns a sum of 2699. If a single byte of the input text were to change, that sum would change too. Checksums are great because they are very fast and make it easy to see if there have been any errors in transmitting data. The problem is they aren't very secure and are easy enough to tamper with. Simply rearranging the bytes is enough to fool a checksum, so "inVentory formation! armpit" has the same checksum as the example above. There's a number of ways to improve checksums, but no matter what they're still relatively simple to tamper with, offseting your malicious changes with other changes to ensure the resulting checksum is right.
 
