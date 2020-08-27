@@ -55,3 +55,8 @@ Yes. I've already been told I have terrible taste in games. In case you somehow 
 
 It was great.
 
+The graphics were suprisingly good, and the survival mechanic was challenging enough at first to be satisfy once I got established. I spent days stuck on the first planet I'd landed on, and once I really got established as an interstellar explorer I felt like I'd really earned that freedom. But even when I was stranded on that planet, an extreme world with acid rain and reduced resources, I still felt very free. I could walk in any direction for hours and nothing would stop me because I had a whole planet to explore. I got tools for digging and I could dig underground shelters and tunnels that snaked for miles so I could travel to important sites without being exposed to the acid rain.
+
+Once I got properly established and moved on to the second galaxy, I slid into _being_. I explored until I found a paradise world with the resource I needed and built a proper base. I've kept exploring since then, but I keep going back to that base. I expand it and explore the world. I've built a couple smaller bases on the same world, catalogued almost all the flora, fauna, and minerals (still a few missing!), and keep bringing back trophies from other worlds I explore. I've got a fancy organic ship, a giant freighter, all the exocraft vehicles, and I'm slowly working through quests given by my base's staff NPCs. But generally, I just _be_, and it is fantastic.
+
+I'm sure No Man's Sky was a let-down at release, but all the hype aside it is my ideal open world game.
