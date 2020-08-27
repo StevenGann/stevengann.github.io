@@ -43,4 +43,15 @@ As an open world game, Arkham City was a let-down. You can explore the city to s
 
 Good grief. There are few games I've ever enjoyed more than Just Cause 3. I'm optomistic about Just Cause 4 but haven't gotten to play it yet. Just Cause 2 was fun, but didn't really suck me in the way 3 did, largely because 3 gives you a jetpack and lets you explore one of the largest open worlds I've even seen.
 
-Of course, until you unlock the jetpack there's plenty of fast cars to _borrow_, 
+Of course, until you unlock the jetpack there's plenty of fast cars to _borrow_, as well as boats and planes. Better yet, once the main storyline is complete and all the map's regions are liberated you can reset regions and liberate them over again! Like Shadow of Mordor, Just Cause isn't an RPG but it is very fun to fly or drive around, stage elaborate stunts, get into a battle, or just blow stuff up. Did I mention the world map is huge? Even in a jet it can take a good while to fly from one end to the other, and with the widning mountain roads it feels like you can drive for hours.
+
+The DLCs add a lot to the replay value, with one adding a new island and the ability to obtain a mech suit, and the other adding a Marvel-style helicarrier and some insanely overpowered weapons as well as the aforementioned jet pack. But at the end of the day it's fun just hijacking a helicopter and blowing up a bridge, or seeing just how far you can make a supercar jump off a ramp.
+
+## No Man's Sky
+
+![_config.yml]({{ site.baseurl }}/images/games/no-mans-sky.png)
+
+Yes. I've already been told I have terrible taste in games. In case you somehow missed it, No Man's Sky was incredibly hyped up and absolutely flopped on release. People had paid small fortunes for pre-order premiums and didn't like what they got. People were hyping it up as the most advanced procedural open _universe_ game to ever be made, and when the end result didn't look half as good as the development screenshots people were ticked. I avoided the hype because I was still healing from a different game that failed to live up to the hype, so I shrugged when it flopped and forgot about it. A while later it was on a great discount so I snapped it up and gave it a try.
+
+It was great.
+
