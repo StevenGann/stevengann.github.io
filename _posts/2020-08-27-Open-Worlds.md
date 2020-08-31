@@ -60,3 +60,23 @@ The graphics were suprisingly good, and the survival mechanic was challenging en
 Once I got properly established and moved on to the second galaxy, I slid into _being_. I explored until I found a paradise world with the resource I needed and built a proper base. I've kept exploring since then, but I keep going back to that base. I expand it and explore the world. I've built a couple smaller bases on the same world, catalogued almost all the flora, fauna, and minerals (still a few missing!), and keep bringing back trophies from other worlds I explore. I've got a fancy organic ship, a giant freighter, all the exocraft vehicles, and I'm slowly working through quests given by my base's staff NPCs. But generally, I just _be_, and it is fantastic.
 
 I'm sure No Man's Sky was a let-down at release, but all the hype aside it is my ideal open world game.
+
+## SPORE
+
+![_config.yml]({{ site.baseurl }}/images/games/spore.png)
+
+SPORE broke my heart. Years before it came out, I read an interview with Will Wright in TIME Magazine. I was already a big fan of Will Wright, spending absurd amounts of time playing SimAnt, SimCity 2000, SimCopter, SimLife, etc. In that interview, Will talked about Maxis' latest project, a sort of SimEverything. He described a game where you start with a cell and guide it through evolution until it can drag itself onto land, and then you guide the species until it evolves enough to gain sapience, and then you guide a tribe to become a civilization and then explore out into the stars. The dgame Will Wright describe set my imagination on fire and for the next several years I dreamed of playing it. I spent hours drawing creatures I'd make in SPORE and planning out goals like terreforming a planet and filling it exclusively with the most monsterous creatures I came across. I even realized that my PC which I'd built from parts I found in a dumpster (AMD Athlon, 512MB RAM, GeForce 4 Ti modded with a Pentium III's heatsink) wouldn't be powerful enough to run it correctly. No, I'd need to build a proper modern gaming PC!
+
+And so I did. It meant waiting over a year after SPORE was released, but I was certain it'd be worth it. Lo and behold, the day came that I'd built a decent gaming PC (AMD Phenom X4 965, 4GB of RAM, dual Radeon 5770s) and could finally buy SPORE. I went to GameStop, paid my $40, hurried home, and started playing immediately.
+
+For the next several hours I guided a species from cell to planetary domination. I made it all the way to space and... got... bored.
+
+There's a distinct design problem with SPORE. You can fly from the Cell stage to the Space stage in two hours, which means you can get to your species' destiny among the stars in a single session. This is a problem for two reasons:
+
+1. The Cell, Creature, Tribal, and Civilization stages are all pretty fun games in their own right. Your decisions in these stages has serious consequences going forward, and there's quite a bit to explore.
+
+2. The Space stage, in contrast, is relatively dull.
+
+It's not that there's nothing to do in the Space stage. There's a truly massive galaxy to explore, countless civilizations to interact with, and you can trade, hunt for treasures, terraform worlds, go to war, any number of things. The issue is that, for about 2 hours, you can't do a whole lot because you're being guided through a narrow path of actions. Go here, pick this up, scan that, come back, go build a colony there, terreform that planet now, find someone to make an alliance with, etc. 
+
+But once you finish all that, you're free to explore the cosmos, right? No. At the start your hyperdrive has very little range so you can't explore very far very fast. Then, your civilization and your allies are constantly calling you back to fix some disaster. Exploring the galaxy or evern going beyond the immediate vicinity means letting your empire collapse. 
