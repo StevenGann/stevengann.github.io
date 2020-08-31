@@ -296,6 +296,15 @@ p > img {
   display: block;
 }
 
+.container > .header {
+  padding: 20px 0;
+  border-bottom: 2px solid $gray;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
