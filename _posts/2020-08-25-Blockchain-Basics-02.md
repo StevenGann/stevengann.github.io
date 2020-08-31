@@ -5,9 +5,7 @@ tags: blockchain cryptocurrency
 category: article
 ---
 
-Blockchain and cryptocurrency are a couple of the biggest buzzwords in technology today. People are rushing to put blockchain into all their products somehow, and everyone and their uncle is pushing the next hot cryptocurrency, half of which aren't even cryptocurrencies.
-
-When you get down to it, these are fairly simple applications of some very complex but established technologies.
+What is a blockchain? How does it work and what is it good for?
 
 # Part 2: A Chain of Blocks
 
