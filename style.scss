@@ -308,10 +308,11 @@ p > img {
 // Neuromorphic buttons
 
 .custom-btn {
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
+  padding: 5px 10px;
+  font-family: 'Arial', sans-serif;
   font-weight: 500;
   background: transparent;
+  color: $lightGray;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -324,10 +325,10 @@ p > img {
 }
 .btn-1:hover {
    box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 5px 0px #0001;
+   -7px -7px 20px 0px #fff5,
+   -4px -4px 5px 0px #fff5,
+   7px 7px 20px 0px #0005,
+   4px 4px 5px 0px #0005;
 }
 
 /* 2 */
