@@ -7,6 +7,8 @@ category: opinion
 
 The Future is here and it's really, really boring. Most of the technology science fiction imagined has come to reality, but it isn't how we wanted it.
 
+**Disclaimer:** There's a lot of generalized references to Star Trek on this page. When the author references Star Trek he is referring to The Original Series, The Next Generation, Deep Space 9, Voyager, The Animated Series, and all the movies related to those series and prior to the JJ Abrams monstrosities. At the time of this writing the author has not watched JJ Abram's 2009 Star Trek more than once or any of its sequels at all, hasn't watched Discovery or Picard due to personal taste disagreements with the shows' formats, and hasn't watched Enterprise because he can't get past that awful, awful theme song. The author also takes a liberal and arbitrary view regarding the inclusion of novels and comics in canon.
+
 ## Hello, Google
 
 ![_config.yml]({{ site.baseurl }}/images/trek/scotty_hello_computer.gif)
@@ -25,6 +27,4 @@ For the most part, the computers from Star Trek are a reality now. In the origin
 
 - Spock's computational directive is a bit trite (how many evil AIs have been stopped this way?) but absolutely plausible. [Wolfram Alpha](https://www.wolframalpha.com/input/?i=Compute+to+the+last+digit%2C+the+value+of+pi) is not only intelligent enough to parse Spock's directive but clever enough to note that pi is irrational and has no last digit.
 
-
-
-
+The Star Trek computers and their usage (usually) remain plausible going forward through the movies, Next Generation, Deep Space 9, and even Voyager, the series where [going too fast made two character "hyper-evolve" into salamanders](https://memory-alpha.fandom.com/wiki/Threshold_(episode)) that reproduced before they were able to be de-evolved somehow by destroying their DNA with antimatter. Nobody ever accused Star Trek of being especially realistic, at least in terms of science. Regardless, most commands to the computers are straight-forward and use simpler sentence structures. Most characters enunciate more clearly when commanding a computer. Modern speech recognition systems are more than capable of understanding the sorts of commands issued to the computers of Star Trek
