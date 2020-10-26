@@ -56,7 +56,7 @@ So let's talk about code. Traditionally, you'd look at a "Hello World" example w
 
 **Note:** The following example code is specifically for a very specific MSP-430 microcontroller. While the names are different for every manufacturer and microcontroller family, the concepts and techniques demonstrated are used everywhere.
 
-```C
+{% highlight c %}
 #include <msp430f2274.h>
 
 int main(void)
@@ -80,7 +80,7 @@ int main(void)
 
   return 0;
 }
-```
+{% endhighlight %}
 
 Simple, right? Even if you know C and this is still confusing, that's fine because a lot of this isn't standard C. Let's go over the weird stuff one at a time. 
 
