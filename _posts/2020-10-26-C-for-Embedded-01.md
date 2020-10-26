@@ -109,6 +109,7 @@ The objective is to disable the watchdog timer because we're not using it. To do
 
 
 `P1DIR = 0x41;`
+
 `P1OUT = 0X01;`
 
 
