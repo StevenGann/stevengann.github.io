@@ -107,10 +107,10 @@ You might be able to guess that `WDTCTL` is a register name specific to this mic
 
 The objective is to disable the watchdog timer because we're not using it. To do so, we need to set specific bits in the `WDTCTL` register to `1` and others to `0`. We could look up the exact position of the bits we need and then hardcode them as numbers, but the manufacturer provided the bit names as constants representing the needed values. The `|` bitwise OR operating will combine the bits into a single value before writing that value to the register.
 
-```
-P1DIR = 0x41;
-P1OUT = 0X01;
-```
+
+`P1DIR = 0x41;`
+`P1OUT = 0X01;`
+
 
 This is pretty much the same thing, except there aren't any handy masks for us this time and we need to do some math.
 
