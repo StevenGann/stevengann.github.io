@@ -5,7 +5,9 @@ tags: programming electronics
 category: article
 ---
 
-Embedded development with C is a completely different animal from more common forms of software development. In this article I'm going to provide a primer of basic concepts needed for C and bare-metal development. There's a lot of variation between applications, but these concepts will smooth out the learning curve so you can seek out more specific resources for your projects. This article assumes you have a basic working knowledge of programming in general, but not necessarily C.
+Embedded development with C is a completely different animal from more common forms of software development. In this article I'm going to provide a primer of basic concepts needed for C and bare-metal development.
+
+There's a lot of variation between applications, but these concepts will smooth out the learning curve so you can seek out more specific resources for your projects. This article assumes you have a basic working knowledge of programming in general, but not necessarily C.
 
 # Part 1: Oh Say Can You C?
 
