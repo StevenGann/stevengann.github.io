@@ -9,7 +9,7 @@ Hardware Validation Engineer | Embedded Systems Specialist
 
 ## Contact
 - 📧 StevenGannJr@gmail.com
-- 🌐 [LinkedIn](http://linkd.in/16pdnk0)
+- 🌐 [LinkedIn](https://www.linkedin.com/in/sgann2012/)
 
 ## Objective
 To help form the cutting edge of the digital technology industry, developing hardware and software, and sharpening the line where they meet.
