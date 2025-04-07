@@ -2,9 +2,8 @@
 aliases: 
 tags: 
 date created: Sunday, April 6th 2025, 6:47:07 pm
-date modified: Sunday, April 6th 2025, 7:47:54 pm
-
-layout: post
+date modified: Sunday, April 6th 2025, 7:52:52 pm
+layout: page
 icon: fas fa-file
 order: 0
 ---
@@ -25,7 +24,7 @@ To help form the cutting edge of the digital technology industry, developing har
 
 ## Technical Skills
 
-### Technical Skills
+### Software Tools
 Altium, Visual Studio, VS Code, Eclipse, Code Composer Studio, Altera Quartus, Logisim, Libero SoC Design Suite, MPLAB, Atmel Studio, Nvidia MODS, FreeCAD
 
 ### Languages
