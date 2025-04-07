@@ -11,7 +11,10 @@ When I'm not working on hardware validation or embedded systems, I enjoy contrib
 ## Quick Facts
 
 - 🎓 MS in Computer Engineering from Florida Atlantic University
+- 🦅 Eagle Scout with Boy Scouts of America
 - 💻 Proficient in C, C++, C#, Rust, and various assembly languages
+- 🏃 Certified SCUBA diver and amateur radio operator (KM4S0Q)
+- 🗣️ Studying Mandarin 汉语
 - 🔧 Experienced with hardware validation, embedded system design, and embedded development
 - 🌐 Specialized in datacenter computing platforms and GPU validation
 - 🛰️ Experience with military, aircraft, and space applications
