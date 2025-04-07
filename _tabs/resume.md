@@ -1,10 +1,15 @@
 ---
+aliases: 
+tags: 
+date created: Sunday, April 6th 2025, 6:47:07 pm
+date modified: Sunday, April 6th 2025, 6:49:14 pm
+
 layout: post
 icon: fas fa-file
 order: 0
 ---
 
-# Steven Gann Double Checking...
+# Steven Gann
 Hardware Validation Engineer | Embedded Systems Specialist
 
 ## Contact
