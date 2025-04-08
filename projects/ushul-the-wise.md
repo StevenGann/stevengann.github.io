@@ -14,7 +14,6 @@ image:
 
 ## Concept
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/1zvT711"  ><a href="https://imgur.com/a/1zvT711">Book Binding Project</a></blockquote><script async src="https://s.imgur.com/min/embed.js" charset="utf-8"></script>
 
-![Desktop View](https://i.imgur.com/HLWrAaQ.jpeg){: width="972" height="589" }
+![Desktop View](/projects/ushul-the-wise/front_a.jpg){: width="972" height="589" }
 _Full screen width and center alignment_
