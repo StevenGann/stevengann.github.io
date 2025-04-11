@@ -12,7 +12,7 @@ image:
 
 ## Concept
 
-Some years ago I had the notion to write a fantasy story with an original setting. Inspired by JRR Tolkien, I set about planning the whole world from its creation through centuries of history, charting the rise and fall of empires and heros. Ultimately, I still haven't written that novel (yet), but I have written a whole encyclodpedia of information about the world and its comings and goings. To make it more grounded and to feel more alive, I started writing the journal of a specific character, a traveling scholar named Ushul. In a masterstroke of procrastination, I decided to make a detour into the art of bookbinding to build a replica of Ushul's journal.
+Some years ago I had the notion to write a fantasy story with an original setting. Inspired by JRR Tolkien, I set about planning the whole world from its creation through centuries of history, charting the rise and fall of empires and heroes. Ultimately, I still haven't written that novel (yet), but I have written a whole encyclopedia of information about the world and its comings and goings. To make it more grounded and to feel more alive, I started writing the journal of a specific character, a traveling scholar named Ushul. In a masterstroke of procrastination, I decided to make a detour into the art of bookbinding to build a replica of Ushul's journal.
 
 ![Desktop View](/projects/ushul-the-wise/front_a.jpg)
 
@@ -28,7 +28,7 @@ A 3D printed jig made it easy to punch a series of holes along the fold of each 
 
 ![Desktop View](/projects/ushul-the-wise/front_b.jpg)
 
-Like most of my prop-making projects, this became an excercise in buying as few things as possible. The leather was from a bag of scraps, the boards were leftovers from another project, the metal hardware was doodads I had lying around. I cut two pieces of thin fiberboard to about the size of the front and back covers, coated them in rubber cement and stuck my two thinnest pieces of leather on them. A thicker strip of leather for the spine and a bit of fabric glued down to hold them all together. Then two strips of fabric glued to the bound pages and the cover, and a couple more sheets of aged deckled paper to cover the fabric.
+Like most of my prop-making projects, this became an exercise in buying as few things as possible. The leather was from a bag of scraps, the boards were leftovers from another project, the metal hardware was doodads I had lying around. I cut two pieces of thin fiberboard to about the size of the front and back covers, coated them in rubber cement and stuck my two thinnest pieces of leather on them. A thicker strip of leather for the spine and a bit of fabric glued down to hold them all together. Then two strips of fabric glued to the bound pages and the cover, and a couple more sheets of aged deckled paper to cover the fabric.
 
 For the corners, I had these stamped metal brackets that I affixed with small tack nails and plenty of glue to be sure. The strap to secure it shut needed to be made from two pieces stitched together.
 
