@@ -4,8 +4,6 @@ description: An artefact from a world that doesn't exist
 layout: project
 categories: [Projects]
 tags: [project, leather, bookbinding, props]
-image:
-  path: /projects/ushul-the-wise/front_a.jpg
 ---
 
 # _Ushul the Wise_ Leatherbound Book Replica
