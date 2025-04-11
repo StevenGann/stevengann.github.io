@@ -6,6 +6,7 @@ date modified: Sunday, April 6th 2025, 7:52:52 pm
 layout: page
 icon: fas fa-file
 order: 0
+title: Résumé
 ---
 
 # Steven Gann

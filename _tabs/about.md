@@ -8,6 +8,8 @@ My name is **Steven Gann** and I am a Hardware Validation Engineer at **NVIDIA**
 
 When I'm not working on hardware validation or embedded systems, I enjoy contributing to open-source projects and exploring new technologies in the fields of AI, IoT, and real-time systems. My current personal projects involve a modular Digital Human system integrating a RAG I constructed to use an Obsidian vault as a knowledgebase, a highly bespoke modular synthesizer system, and cosplay.
 
+_You might be looking for [my résumé!](https://stevengann.com/resume/)_
+
 ## Quick Facts
 
 - 🎓 MS in Computer Engineering from Florida Atlantic University
