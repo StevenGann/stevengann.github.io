@@ -1,6 +1,6 @@
 ---
 title: Ushul the Wise Leatherbound Book
-description: Description
+description: An artefact from a world that doesn't exist
 layout: project
 categories: [Projects]
 tags: [project, leather, bookbinding, props]
