@@ -19,8 +19,9 @@ Embedded Systems Specialist | Hardware Validation Engineer
 To help form the cutting edge of the digital technology industry, developing hardware and software, and sharpening the line where they meet.
 
 ## Education
-[Florida Atlantic University](https://www.fau.edu/engineering/) _Boca Raton, FL_
 **MS in Computer Engineering**, minor in **Business Administration**
+
+&ensp;&ensp;&ensp;&ensp;[Florida Atlantic University](https://www.fau.edu/engineering/) _Boca Raton, FL_
 
 ## Technical Skills
 
@@ -67,8 +68,10 @@ During my graduate program at FAU, I was hired as a teaching assistant for Logic
 I was heavily involved in the bring-up validation for three of the initial SKUs for Blackwell datacenter GPUs. My contribution to these SKUs was predominantly in regression testing new firmware versions and debugging of the proprietary GPU testing tool our team used for running validation tests. I was responsible for curating a suite of tests to balance coverage versus test time and ensuring these tests were run on each new release of the firmware, investigating all test failures to identify if they were meaningful failures, isolate the root cause, and lead debug efforts as needed.
 
 ### Microchip Memory Explorer
-[SERIAL MEMORY I2C EVALUATION KIT](https://www.microchip.com/en-us/development-tool/DM160237)  
+[SERIAL MEMORY I2C EVALUATION KIT](https://www.microchip.com/en-us/development-tool/DM160237)
+
 [SERIAL MEMORY SPI EVALUATION KIT](https://www.microchip.com/en-us/development-tool/EV20F92A)
+
 [SERIAL MEMORY SINGLE-WIRE EVALUATION KIT](https://www.microchip.com/en-us/development-tool/dm160232)
 
 Intended as a replacement for the antiquated Serial Memory Starter Kit, the I2C and SPI evaluation kits were produced to allow customers to read, write, and configure their serial memory devices during prototyping, as well as explore the features provided by each product in their respective families. I inherited and completed the original I2C Eval Kit GUI software and was the sole developer of the original SPI Eval Kit GUI software. Both of these were then superseded by the newer Memory Explorer software which I developed as part of a team of developers I was tasked to oversee. The original two GUIs provided a series of challenging obstacles as we were committed to an existing hardware design and firmware and in the case of the I2C GUI there was far too much existing development to justify a clean slate approach. The rewrite, Memory Explorer, provided its own challenges as we needed to work around unique internal customer requirements while also providing modernized UI/UX.
