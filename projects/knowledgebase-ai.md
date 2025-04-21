@@ -6,6 +6,10 @@ categories: [Projects]
 tags: [project, programming, ai]
 ---
 
+# Knowledgebase AI
+
+## A quest to build transparent minds
+
 During my time at Nvidia I was inspired by the "digital humans" and other manifestations of agentic AI that were being developed at or supported by Nvidia. I had already been playing around with LLMs and had constructed my own self-hosted [RAG](https://en.wikipedia.org/wiki/Retrieval-augmented_generation), but I got my mind set on an area I haven't seen developers explore much. I wanted to explore more self-sufficient, self-improving, and self-motivated AI agents.
 
 In my previous experiments, I had constructed a RAG chatbot that used my [Obsidian](https://obsidian.md/) vault as its backing source of information. Obsidian is a personal knowledgebase application I've been using for several years now to organize notes in Markdown format. The chatbot was helpful for finding things in my notes I had totally forgotten about or finding connections I hadn't noticed before, but it also had some limitations because it was often missing context to understand some of my notes. I found myself expanding some notes or writing new notes specifically to add context for the AI, and I imagined expanding my chatbot so it could ask me questions or look up primary sources to expand the knowledgebase on its own.
