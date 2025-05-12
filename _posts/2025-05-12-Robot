@@ -1,0 +1,14 @@
+---
+title: Building the Mite
+description: A rover from scratch for learning SLAM and robot AI
+categories: [Projects, Programming, Robotics]
+tags: [AI, Robot]
+mermaid: true
+meta_description: ""
+keywords: ""
+---
+
+I've been fascinated with robots for as long as I can remember, and I was building robots since I was a kid. I had Lego Mindstorms and competed in the FIRST Lego League, I got a Parallax BOEbot kit and programmed it to do all sorts of things in BASIC. In college I repurposed the chassis to add a CMU Cam module and an ultrasonic distance sensor on a pan/tilt assembly and controlled the whole thing with a Raspberry Pi. At some point, that robot got disassembled and rebuilt into a simpler remote controlled robot with a claw on it, a one-day project to prepare a STEM demo for some children who would be visiting the university for a science fair.
+
+{% include embed/youtube.html id='29jIY2eN7OA' %}
+
