@@ -38,10 +38,9 @@ social:
   email: stevengannjr@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/stevengann # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
+    - https://stevengann.com
     - https://www.linkedin.com/in/sgann2012
+    - https://github.com/stevengann # change to your GitHub homepage
 
 # Site Verification Settings
 webmaster_verifications:
@@ -60,7 +59,7 @@ analytics:
   google:
     id: # fill in your Google Analytics ID
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: stevengann
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
@@ -74,7 +73,7 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter
 
 # Prefer color scheme setting.
 #
@@ -87,7 +86,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: dark
+theme_mode:
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
