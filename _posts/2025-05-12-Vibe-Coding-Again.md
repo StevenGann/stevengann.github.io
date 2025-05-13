@@ -1,11 +1,11 @@
 ---
 title: Vibe Coding - Caution and Common Sense
-description: A less optimistic look at AI-assisted coding
+description: A critical look at AI-assisted coding, discussing the importance of human oversight, common pitfalls, and how AI can enhance but not replace developer productivity.
 categories: [Projects, Programming]
 tags: [AI]
 mermaid: true
-meta_description: ""
-keywords: "vibe coding, AI programming, Cursor IDE, AI coding assistant, software development, programming tools, AI pair programming, developer productivity"
+meta_description: "A critical look at AI-assisted coding, discussing the importance of human oversight, common pitfalls, and how AI can enhance but not replace developer productivity."
+keywords: "AI-assisted coding, generative AI, developer productivity, software development, AI risks, code quality, human oversight, Vibe Coding, programming best practices, AI tools, technology trends"
 ---
 
 After I published my [previous post about Vibe Coding](https://stevengann.com/posts/Vibe-Coding/) I got a decent amount of feedback from friends and colleagues, some of it enthusiastic and some of it skeptical, and a couple people who were outright hostile. To some people, it seemed that I was being blindly optimistic and careless about the potential risks of AI-assisted coding. I stand by my previous statements as being my thoughts at the time, and while I have learned a bit more since then I have no intention of retracting them. I do think it is fair to make a few points about how to use tools in a sensible way.
