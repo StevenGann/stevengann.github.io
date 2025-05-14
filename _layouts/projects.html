@@ -6,6 +6,8 @@ layout: default
 
 {% assign pages = site.pages | where_exp: 'page', 'page.title and page.hidden != true and page.layout == "project"' %}
 
+> This section is under construction 
+{: .prompt-warning }
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for page in pages %}
