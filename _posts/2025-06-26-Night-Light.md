@@ -9,7 +9,7 @@ mermaid: true
 
 ## Introduction
 
-A popular DIY project circulating online demonstrates how to construct a USB-powered night light using minimal components. While the video provides excellent assembly instructions and soldering techniques, it lacks detailed circuit analysis. This article provides a comprehensive technical examination of the circuit's operation and underlying principles.
+A popular DIY project circulating online demonstrates how to construct a USB-powered night light using minimal components. While the videos provide excellent assembly instructions and soldering techniques, they lack detailed circuit analysis. I had a non-engineer friend ask me how the circuit works, so here's a detailed analysis.
 
 ## Circuit Overview
 
@@ -25,8 +25,6 @@ The circuit operates on a simple principle: the photoresistor's resistance varie
 
 ## Transistor Fundamentals
 
-### NPN Bipolar Junction Transistor Operation
-
 The circuit employs an NPN bipolar junction transistor (BJT) as its primary control element. Understanding transistor operation is essential for circuit analysis.
 
 An NPN transistor consists of three terminals:
@@ -39,10 +37,6 @@ In the active region of operation, the transistor functions as a current-control
 I<sub>CE</sub> = β × I<sub>BE</sub>
 
 This amplification property makes transistors ideal for switching and amplification applications.
-
-### PNP Transistor Comparison
-
-For completeness, PNP transistors operate with reversed current flow. In PNP devices, current flows from emitter to collector, controlled by base current flowing out of the base terminal. The fundamental relationship remains similar, but with opposite current directions.
 
 ## Circuit Analysis
 
@@ -59,7 +53,7 @@ Where:
 
 ### Light-Dependent Operation
 
-The photoresistor exhibits negative photoconductivity:
+A photoresistor exhibits negative photoconductivity:
 - **High light levels**: Low resistance (typically 1-10 kΩ)
 - **Low light levels**: High resistance (typically 100kΩ-1MΩ)
 
@@ -80,40 +74,13 @@ As ambient light decreases:
 4. Collector current decreases
 5. LED brightness increases
 
-This creates the desired night light behavior: automatic illumination in darkness.
 
 ## Design Considerations
 
-### Component Selection
-
 - **Transistor**: Any general-purpose NPN transistor (2N2222, BC547, etc.)
-- **Photoresistor**: CdS cell with appropriate resistance range
+- **Photoresistor**: CdS cell with appropriate resistance range, such as 100k Ohm
 - **LEDs**: Standard 5mm LEDs with appropriate forward voltage
-- **Resistors**: Values chosen to provide suitable biasing and current limiting
-
-### Power Efficiency
-
-The circuit's efficiency depends on:
-- LED forward voltage and current requirements
-- Transistor saturation characteristics
-- Photoresistor sensitivity and resistance range
-
-### Response Characteristics
-
-The circuit's response time is primarily limited by:
-- Photoresistor response time (typically 10-100ms)
-- Transistor switching speed (negligible for this application)
-- LED turn-on time (negligible)
-
-## Practical Applications
-
-This circuit demonstrates fundamental electronic concepts including:
-- Transistor switching and amplification
-- Light-dependent resistance
-- Voltage divider networks
-- Current control and regulation
-
-The design principles can be extended to more complex applications such as automatic lighting systems, light-sensitive alarms, and environmental monitoring circuits.
+- **Resistors**: Values chosen to provide suitable biasing, most designs use a 10k Ohm resistor opposite the photoresistor, and a 1k Ohm resistor in series with the photoresistor
 
 ## Conclusion
 
