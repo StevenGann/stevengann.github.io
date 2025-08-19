@@ -7,9 +7,15 @@ math: true
 mermaid: true
 ---
 
+
 ## Introduction
 
 I've been fascinated with particle systems for years, mostly because they're one of those things that look simple until you try to make thousands of them run at 60 FPS. Most developers, myself included, start with the obvious object-oriented approach and quickly run into a wall when performance matters. After wrestling with this problem on several projects, I finally decided to take a serious look at Data Oriented Design and see what all the fuss was about. The results were pretty eye-opening.
+
+
+## The Code
+
+I've [published the complete program](https://github.com/StevenGann/Demos/blob/main/Particles/Program.cs) as a tidy demo for you to play around with.
 
 ## The Traditional Object-Oriented Approach vs. Data Oriented Design
 
