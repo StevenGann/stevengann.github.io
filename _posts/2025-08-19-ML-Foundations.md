@@ -46,6 +46,8 @@ graph TD
     end
 ```
 
+_Note: At the time of this writing there is a bug in my website's Mermaid diagram renderer. The Undirected Graph's connections should not have arrows, just lines connecting without any implied direction._
+
 What makes graphs particularly useful in AI is their flexibility. The same graph representation can model a robot's state space (nodes = positions, edges = possible moves) or a knowledge network in a chatbot (nodes = concepts, edges = relationships). It's a universal language for describing relationships, which is why graph databases are having a moment in AI applications.
 
 ### Binary Trees: Hierarchical Organization
