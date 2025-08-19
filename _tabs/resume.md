@@ -40,29 +40,29 @@ SIMD, .NET, Object Oriented Programming, Data Oriented Design, Hardware emulatio
 
 ## Work Experience
 
-**Meta Platforms, Inc.** Menlo Park, CA
-_Manufacturing Test Engineer_ **2025-Present**
+**Meta Platforms, Inc.** Menlo Park, CA \
+_Manufacturing Test Engineer_ **2025-Present** \
 As a Manufacturing Test Engineer at Meta, I work within the infrastructure team to develop and maintain validation tests for the many server racks deployed at Meta's datacenters. Building on my past experiences, I solve problems quickly and ensure a consistent workflow that scales out to the most extensive compute infrastructure on Earth.
 
-**NVIDIA Corporation** Santa Clara, CA
-_Hardware Validation Engineer_ **2023-2025**
+**NVIDIA Corporation** Santa Clara, CA \
+_Hardware Validation Engineer_ **2023-2025** \
 As a Hardware Validation Engineer at Nvidia, I worked within the Server Product Team to develop compute platforms for datacenter applications. In this role, I interacted with a broad cross-functional network across NVIDIA and spearheaded validation and debug efforts across multiple product families and platforms, including GPU families like Hopper and Blackwell, and the Grace CPU platform. This position exposed me to the engineering concerns of high performance and high reliability computing, integration of complex compute systems into flexible software ecosystems, and the validation process for high power voltage regulators, PCIe, NVLink, and high-speed DRAM.
 
-**Microchip Technology Inc.** Chandler, AZ
-_Senior Product Engineer_ **2022-2023**
+**Microchip Technology Inc.** Chandler, AZ \
+_Senior Product Engineer_ **2022-2023** \
 As a Product Engineer at Microchip, I worked within the 8-bit Microcontrollers division. I was involved in the New Product Development process from business plan to hardware development and then to manufacturing and sustaining business. I worked with multiple cross-discipline teams to ensure that resources are allocated, quality processes are followed, and the development lifecycle of each product proceeds on schedule until the product has not only been released to customers but has had all critical issues corrected and profit margins have met goals.
 
-_Applications Engineer_ **2017-2022**
+_Applications Engineer_ **2017-2022** \
 As an Applications Engineer at Microchip, I worked within the Memory Products Division. I specialized in serial EEPROM and NOR Flash products, and my responsibilities included contributing to Design Objective Specifications, product validation, customer application support, and development of new training collateral and development tools for both internal and external customers.
 
 Starting in 2020, my responsibilities expanded to leading the MPD Apps Software Development team. In this role, I implemented an Agile-based project management flow and led the team in development and maintenance of several open source customer training projects, the Serial EEPROM and Serial Flash modules for MPLAB Code Configurator, and the Microchip Memory Explorer development tool. I oversaw the adoption of git, Jira, and Confluence and provided the entire MPD Apps team with training on all of these tools.
 
-**Logus Microwave Inc.** West Palm Beach, FL
-_Embedded Systems Engineer_ **2015-2017**
+**Logus Microwave Inc.** West Palm Beach, FL \
+_Embedded Systems Engineer_ **2015-2017** \
 At Logus Microwave, my team worked to develop the future of RF switching technology with embedded processing and IoT technologies. Beyond my hardware design and software development projects, I also worked to improve our ATE workflows with software automation and embedded processing. I have also had the great experience of working in teams from widely varied cultural and linguistic backgrounds.
 
-**Florida Atlantic University** Boca Raton, FL
-_Graduate Teaching Assistant_ **2014-2015**
+**Florida Atlantic University** Boca Raton, FL \
+_Graduate Teaching Assistant_ **2014-2015** \
 During my graduate program at FAU, I was hired as a teaching assistant for Logic Design and Microprocessors under the distinguished Dr. Bassem Alhalabi. My duties involved grading and assisting with students' understanding of digital logic circuits and MSP-430 programming in Assembly and C.
 
 ## Notable Professional Projects
