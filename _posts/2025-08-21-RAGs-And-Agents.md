@@ -5,7 +5,6 @@ categories: [AI, Programming]
 tags: [rag, retrieval-augmented-generation, ai-agents, llm, vector-databases, embeddings, machine-learning]
 math: true
 mermaid: true
-hidden: true
 ---
 
 I've been building AI systems since the 00s, and one thing that becomes clear when you work with these models is that they're simultaneously incredibly powerful and frustratingly limited. In my [previous posts on neural networks](https://stevengann.com/posts/Neural-Networks/), I covered how these systems work at a fundamental level. Now we're getting to the practical applications—how to build AI systems that actually do useful work in the real world.
