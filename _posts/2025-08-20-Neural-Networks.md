@@ -5,7 +5,6 @@ categories: [AI, Programming]
 tags: [neural-networks, deep-learning, machine-learning, perceptrons, backpropagation, cnn, rnn, transformers, llms]
 math: true
 mermaid: true
-hidden: true
 ---
 
 I've been fascinated with neural networks for years, mostly because they're one of those things that look simple until you try to make them actually work. In my [previous post on Machine Learning Foundations](https://stevengann.com/posts/ML-Foundations/), I explored the classical algorithms and data structures that power intelligent systems. Now we're moving into the territory that gets all the attention—neural networks. But here's the thing: neural networks aren't magic. They're just another way to solve the same problems we've been tackling with classical techniques, but with a different approach to representing and learning patterns.
@@ -30,7 +29,7 @@ graph LR
         A1[Input: 0.7] --> B1[Threshold: 0.5] --> C1[Output: 1<br/>True]
         A2[Input: 0.3] --> B2[Threshold: 0.5] --> C2[Output: 0<br/>False]
     end
-    
+
     subgraph "Fuzzy Logic"
         A3[Input: 0.7] --> D1[Fuzzy Function] --> C3[Output: 0.7<br/>70% True]
         A4[Input: 0.3] --> D2[Fuzzy Function] --> C4[Output: 0.3<br/>30% True]
@@ -49,14 +48,14 @@ graph LR
         X1[x₁] --> W1[w₁]
         X2[x₂] --> W2[w₂]
         X3[x₃] --> W3[w₃]
-        
+
         W1 --> Sum[Σ wᵢxᵢ + b]
         W2 --> Sum
         W3 --> Sum
-        
+
         Sum --> Act[Activation Function]
         Act --> Output[y]
-        
+
         B[bias] --> Sum
     end
 ```
@@ -91,34 +90,34 @@ graph LR
         I2[Input 2]
         I3[Input 3]
     end
-    
+
     subgraph "Hidden Layer"
         H1[Hidden 1]
         H2[Hidden 2]
         H3[Hidden 3]
         H4[Hidden 4]
     end
-    
+
     subgraph "Output Layer"
         O1[Output 1]
         O2[Output 2]
     end
-    
+
     I1 --> H1
     I1 --> H2
     I1 --> H3
     I1 --> H4
-    
+
     I2 --> H1
     I2 --> H2
     I2 --> H3
     I2 --> H4
-    
+
     I3 --> H1
     I3 --> H2
     I3 --> H3
     I3 --> H4
-    
+
     H1 --> O1
     H1 --> O2
     H2 --> O1
@@ -188,13 +187,13 @@ graph TD
         B --> C[Output Layer]
         C --> D[Compute Error]
     end
-    
+
     subgraph "Backward Pass"
         D --> E[Compute Output Gradients]
         E --> F[Propagate to Hidden Layer]
         F --> G[Update Weights]
     end
-    
+
     G -.->|Next Iteration| A
 ```
 
@@ -228,7 +227,7 @@ graph TD
         D1 --> E1[Layer 4: 10 neurons]
         E1 --> F1[Output]
     end
-    
+
     subgraph "Modern Wide Networks"
         A2[Input] --> B2[Layer 1: 1000 neurons]
         B2 --> C2[Layer 2: 1000 neurons]
@@ -338,13 +337,13 @@ graph TD
         PE --> Encoder[Encoder Block]
         Encoder --> Decoder[Decoder Block]
         Decoder --> Output[Output Sequence]
-        
+
         subgraph "Encoder Block"
             EB1[Multi-Head Attention]
             EB2[Add & Norm]
             EB3[Feed Forward]
             EB4[Add & Norm]
-            
+
             EB1 --> EB2
             EB2 --> EB3
             EB3 --> EB4
@@ -382,7 +381,7 @@ graph TD
         Transformer --> LMHead[Language Model Head]
         LMHead --> Output[Next Token Prediction]
     end
-    
+
     subgraph "Training Process"
         Corpus[Text Corpus<br/>45TB of data] --> Preprocess[Preprocessing]
         Preprocess --> Train[Training<br/>175B parameters]
