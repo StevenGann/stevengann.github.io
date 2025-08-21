@@ -10,6 +10,12 @@ keywords: "vibe coding, AI programming, AI coding assistant, software developmen
 
 After several months of daily AI-assisted development across multiple projects, from building [VulcanAI](https://stevengann.com/posts/VulcanAI/) to wrestling with [LIDAR data processing in robotics](https://stevengann.com/posts/Robot/), I've developed a workflow that consistently produces high-quality results while avoiding the common pitfalls that plague many AI coding initiatives. This post distills those lessons into a practical framework for effective vibe coding, building on the insights from my [previous exploration of AI-assisted development](https://stevengann.com/posts/Vibe-Coding/).
 
+### Disclaimer:
+
+In this article, I am presenting my opinions and practices based on my personal experiencs with Cursor, Github Copilot, and other AI coding tools. There is no objective "right way," and what matters is finding a methodology that works for you and meets your needs.
+
+I am also oversimplify and personifying AI agents quite a bit. It is important to understand how these agents actually work to understand their strengths and weaknesses, but that is beyond the scope of this article. I recommend my recent post [about AI agents](https://stevengann.com/posts/RAGs-And-Agents/) as a starting point for more information.
+
 ## What AI Coding Agents Are and Aren't
 
 Before diving into techniques, it's crucial to understand what we're actually working with. AI coding agents are neither the silver bullet that will eliminate the need for skilled developers nor the useless gimmick that some critics claim.
@@ -54,7 +60,7 @@ Finally, periodically ask the AI to update the project README or write architect
 
 Through trial and error across multiple projects, I've settled on a five-phase workflow that consistently produces good results while maintaining architectural coherence and code quality.
 
-**Context Preparation** forms the foundation of every project. Before writing any code, I populate the AI's context with all relevant resources: style guides and coding standards for the chosen language and framework, documentation for libraries and APIs I plan to use, example code from similar projects when relevant, and any domain-specific documentation or requirements. This upfront investment in context preparation pays dividends throughout the entire development process.
+**Context Preparation** forms the foundation of every project. Before writing any code, I populate the AI's context with all relevant resources: style guides and coding standards for the chosen language and framework, documentation for libraries and APIs I plan to use, example code from similar projects when relevant, and any domain-specific documentation or requirements. This upfront investment in context preparation pays dividends throughout the entire development process. It is important to understand that context serves as the long-term memory of the AI agent, and most agents have some means of attaching documents and links to the context to persist between interactions. Furthermore, documentation and comments in the code itself can serve as memory by moving information out of the short term context and into the long term context.
 
 **README-Driven Development** begins each project with clarity of purpose. I start by writing a basic README explaining what the program should do, then ask the AI to expand this into a comprehensive README for an in-development project. This expanded version includes detailed feature descriptions, an implementation plan with milestones, technology stack justification, and an architecture overview. I carefully review and edit this document because it becomes the foundation for all subsequent development—both the AI and I refer back to it constantly to maintain focus and consistency.
 
