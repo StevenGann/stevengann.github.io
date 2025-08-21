@@ -167,19 +167,13 @@ class WeatherTool:
 
 agent_tools = [DatabaseTool(), WeatherTool()]
 agent = Agent(llm=my_llm, tools=agent_tools)
+```
 
 ### Thinking Mode: Complex Reasoning
 
-Advanced agents implement "thinking mode"—the ability to break down complex requests into multiple steps and reason about the best approach. This is where agents move beyond simple tool use into genuine problem-solving.
+Advanced agents implement what's often called "thinking mode"—they can break down complex requests into multiple steps and reason about the best way to tackle a problem. This is where agents move beyond simply using tools and start engaging in genuine problem-solving.
 
-When you ask an agent to "analyze sales trends and suggest optimizations," it might:
-
-1. Query the database for recent sales data
-2. Identify patterns in the retrieved data
-3. Research industry benchmarks through web search
-4. Generate visualizations to illustrate trends
-5. Formulate specific, actionable recommendations
-6. Present findings in a structured report
+For example, if you ask an agent to analyze sales trends and suggest optimizations, it doesn't just perform a single action. Instead, it might start by querying the database for recent sales data, then look for patterns in what it finds. It could go on to research industry benchmarks by searching the web, generate visualizations to help illustrate the trends, and use all of this information to come up with specific, actionable recommendations. Finally, it would present its findings in a well-structured report, tying everything together in a way that's easy to understand.
 
 ```mermaid
 flowchart TD
