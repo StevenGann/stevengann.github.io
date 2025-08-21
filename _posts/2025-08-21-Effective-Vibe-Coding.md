@@ -8,7 +8,7 @@ meta_description: "A comprehensive guide to effective AI-assisted coding, coveri
 keywords: "vibe coding, AI programming, AI coding assistant, software development, programming productivity, AI workflow, code quality, developer tools"
 ---
 
-After several months of daily AI-assisted development across multiple projects, I've developed a workflow that consistently produces high-quality results while avoiding the common pitfalls that plague many AI coding initiatives. This post distills those lessons into a practical framework for effective vibe coding.
+After several months of daily AI-assisted development across multiple projects, from building [VulcanAI](https://stevengann.com/posts/VulcanAI/) to wrestling with [LIDAR data processing in robotics](https://stevengann.com/posts/Robot/), I've developed a workflow that consistently produces high-quality results while avoiding the common pitfalls that plague many AI coding initiatives. This post distills those lessons into a practical framework for effective vibe coding, building on the insights from my [previous exploration of AI-assisted development](https://stevengann.com/posts/Vibe-Coding/).
 
 ## What AI Coding Agents Are and Aren't
 
@@ -18,7 +18,7 @@ Before diving into techniques, it's crucial to understand what we're actually wo
 
 AI agents are **not a replacement for skilled human developers.** They lack the experience, architectural vision, and problem-solving intuition that comes from years of building real systems. They can't make the high-level decisions that determine whether a project succeeds or fails. Some businesses, lured by the promise of rapid cost savings, have made the mistake of firing experienced developers and expecting non-programmers to use AI tools to generate code with minimal oversight. This approach is deeply misguided and inevitably leads to disaster. Without the judgment and expertise of skilled developers, projects quickly accumulate technical debt, suffer from poor architecture, and become difficult to maintain or scale. AI-generated code, when left unchecked, often misses critical edge cases, security concerns, and long-term maintainability considerations that experienced developers instinctively account for.
 
-Similarly, AI agents are **not a fire-and-forget "easy button" for development.** The fantasy of describing an application in a single sentence and getting production-ready code is exactly that—a fantasy. AI agents require careful guidance, constant oversight, and frequent course correction. They work best when treated as sophisticated tools that augment human capability rather than replace human judgment.
+Similarly, AI agents are **not a fire-and-forget "easy button" for development.** The fantasy of describing an application in a single sentence and getting production-ready code is exactly that—a fantasy. AI agents require careful guidance, constant oversight, and frequent course correction. They work best when treated as sophisticated tools that augment human capability rather than replace human judgment. As I discussed in [my cautionary follow-up on vibe coding](https://stevengann.com/posts/Vibe-Coding-Again/), blind trust in AI-generated code can lead to serious technical debt and maintenance nightmares.
 
 ### What They ARE
 
@@ -60,7 +60,7 @@ Through trial and error across multiple projects, I've settled on a five-phase w
 
 **Skeleton-First Architecture** diverges from traditional incremental development. Rather than building features one by one, I instruct the AI to create the complete program structure upfront using placeholder code for unimplemented functionality. This approach ensures a coherent architecture from the start and identifies potential integration issues early, before they're expensive to fix. The skeleton serves as a roadmap that guides all subsequent implementation work.
 
-**Test-Driven Implementation** provides objective success criteria for every feature. I describe test cases in detail and have the AI set up the testing framework and implement the tests I've specified. This creates clear success criteria and enables autonomous verification of implementations, allowing the AI to iterate on solutions independently until they pass all tests.
+**Test-Driven Implementation** provides objective success criteria for every feature. I describe test cases in detail and have the AI set up the testing framework and implement the tests I've specified. This creates clear success criteria and enables autonomous verification of implementations, allowing the AI to iterate on solutions independently until they pass all tests. This approach mirrors the methodical testing strategies I apply in hardware projects like [building the Mite robot](https://stevengann.com/posts/Robot/), where incremental validation prevents costly integration failures.
 
 **Iterative Feature Development** forms the core development cycle: implement tests for the next feature, implement the feature to pass those tests, validate against the full test suite, clean up documentation and comments, then repeat. I take periodic breaks during this cycle to review the overall architecture, update documentation, and ensure the AI hasn't drifted from the original design goals. This rhythm maintains both momentum and quality throughout the project lifecycle.
 
