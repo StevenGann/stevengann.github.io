@@ -1,7 +1,7 @@
 ---
 title: Neural Networks - From Perceptrons to Transformers
 description: A deep dive into how artificial neurons work, how networks learn through backpropagation, and how modern architectures like CNNs, RNNs, and transformers process different types of data
-categories: [AI, Programming]
+categories: [Programming, AI]
 tags: [neural-networks, deep-learning, machine-learning, perceptrons, backpropagation, cnn, rnn, transformers, llms]
 math: true
 mermaid: true

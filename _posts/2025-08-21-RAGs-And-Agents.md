@@ -1,7 +1,7 @@
 ---
 title: RAGs and Agents - Practical AI Beyond Pure Language Models
 description: How Retrieval-Augmented Generation and AI agents transform LLMs from text predictors into capable systems that can access knowledge and take actions
-categories: [AI, Programming]
+categories: [Programming, AI]
 tags: [rag, retrieval-augmented-generation, ai-agents, llm, vector-databases, embeddings, machine-learning]
 math: true
 mermaid: true

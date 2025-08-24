@@ -1,7 +1,7 @@
 ---
 title: Effective Vibe Coding - A Practical Guide
 description: Lessons learned from months of AI-assisted development and how to maximize productivity while maintaining code quality
-categories: [Projects, Programming]
+categories: [Programming, AI]
 tags: [AI]
 mermaid: true
 meta_description: "A comprehensive guide to effective AI-assisted coding, covering best practices, workflow strategies, and lessons learned from real-world development projects."

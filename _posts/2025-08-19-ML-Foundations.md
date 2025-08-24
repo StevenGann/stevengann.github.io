@@ -1,7 +1,7 @@
 ---
 title: Machine Learning Foundations - The Building Blocks Before the Hype
 description: A journey through the data structures, search algorithms, and optimization techniques that actually power the AI systems everyone talks about
-categories: [AI, Programming]
+categories: [Programming, AI]
 tags: [machine-learning, algorithms, data-structures, optimization, search, foundations]
 math: true
 mermaid: true
