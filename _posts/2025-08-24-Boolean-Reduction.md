@@ -127,24 +127,18 @@ The rows represent D (0 = $\overline{D}$, 1 = D) and the columns represent WM co
 
 ### Finding Groups and Simplifications
 
-The power of K-maps comes from grouping adjacent 1s. Each group represents a simplified term. Looking at our map, I can identify several groupings:
+The power of K-maps comes from grouping adjacent 1s. Each group represents a simplified term. Looking at our map, I can identify the optimal groupings:
 
-The two 1s in the rightmost column (positions 11 for both D=0 and D=1) represent $WM$. Since D appears as both 0 and 1 in this group, the D variable cancels out, leaving just $WM$.
+Group 1: The vertical pair in column 11 (WM = 11) covers both D=0 and D=1. Since D appears as both 0 and 1 in this group, the D variable is eliminated, leaving just $WM$.
 
-The three 1s in the bottom row (positions 01, 11, and 10 for D=1) can be grouped as two overlapping pairs. The pair at positions 11 and 10 gives us $D\overline{M}$ (since W appears as both 0 and 1). The pair at positions 01 and 11 gives us $DM$ (since W appears as both 0 and 1).
+Group 2: The horizontal pair in row D=1, columns 01 and 11, covers the terms $\overline{W}M$ and $WM$ with D=1. Since W appears as both 0 and 1 in this group, the W variable is eliminated, leaving us with $DM$.
 
-Wait, let me be more systematic about this. Looking at the actual groupings:
+The optimal grouping gives us:
+$$A = WM + DM$$
 
-Group 1: The vertical pair in column 11 (WM = 11) covers both D=0 and D=1, so this simplifies to just $WM$.
+We can factor this further: $A = M(W + D)$
 
-Group 2: The horizontal pair in row D=1, columns 01 and 11, covers $\overline{W}M$ and $WM$ with D=1, so this simplifies to $DM$.
-
-Group 3: The horizontal pair in row D=1, columns 11 and 10, covers $WM$ and $W\overline{M}$ with D=1, so this simplifies to $DW$.
-
-But we need to be careful about overlapping groups. The optimal grouping gives us:
-$$A = WM + DW$$
-
-This is dramatically simpler than our original expression: $\overline{D}WM + D\overline{W}M + DW\overline{M} + DWM$.
+This is dramatically simpler than our original expression: $\overline{D}WM + D\overline{W}M + DW\overline{M} + DWM$. The K-map reduction eliminated two terms and simplified the logic significantly.
 
 ### K-Maps for Larger Systems
 
@@ -205,7 +199,7 @@ bool alarm = (!door && window && motion) ||
 The simplified version is much cleaner:
 
 ```csharp
-bool alarm = (window && motion) || (door && window);
+bool alarm = (window && motion) || (door && motion);
 ```
 
 This isn't just more readable—it's faster. The simplified version performs fewer logical operations and has better branch prediction characteristics because there are fewer conditional branches.
