@@ -5,11 +5,10 @@ categories: [Electronics, Digital Logic]
 tags: [logic-design, digital-circuits, hardware]
 math: true
 mermaid: true
-meta_description: "A comprehensive guide to Boolean algebra reduction using Karnaugh maps, covering applications in hardware design, FPGA optimization, and algorithmic efficiency."
 keywords: "Boolean algebra, logic simplification, digital circuits, FPGA, truth tables, logic gates"
 ---
 
 This page is under construction.
 
 
-<iframe src="/files/html/posts/predoc_map.html" height="600px" width="100%" style="border:none;"></iframe>
+<iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgAncDQkPK7Hhp8qVMJDYBnEIOH9aNPCKjgQAMwCGAG0kM2Ad2695YHjIQoobAMYyh5y6d7YLtKLHhgkTYtEwo6RVZFSGxiXhZRNi07OQF7F0sxd0gwFGJ+SgRsQTxCUxQlCQA3BSVEsuVRWiokapgETliHSoqxODYAezdCYSoaSFIQNBS64bdsLpkQXpUBoZGYSCQIS3pJ7qpZ-sHid0IUOtgkSySZNkFpgDEIUQ9PFLhxCBYQAGENAAcNawBLABcNAA7ax6S7CG4qJYQMCwF4QACSQIAJgBXayAkFgoogSHJZ4gV4AJQYkl+kkxoLYAAtVMJJkA" height="600px" width="100%" style="border:none;"></iframe>
