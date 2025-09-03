@@ -147,7 +147,7 @@ The training process iteratively adjusts these weights so that tokens appearing 
 
 ### Size and Efficiency: Small Models, Big Impact
 
-Compared to Large Language Models, embedding models are remarkably compact and efficient. While LLMs require tens of gigabytes to multiple terabytes of storage and massive computational resources, embedding models typically range from tens of kilobytes to hundreds of megabytes. This size difference reflects their focused purpose—instead of learning to generate coherent text, they only need to learn meaningful representations.
+Compared to Large Language Models, embedding models are remarkably compact and efficient. While LLMs require tens of gigabytes to multiple terabytes of storage and massive computational resources, embedding models typically range from tens of kilobytes to hundreds of megabytes, with most production models like `all-MiniLM-L6-v2` being 22-90MB and sentence transformers ranging 100MB-400MB. This size difference reflects their focused purpose—instead of learning to generate coherent text, they only need to learn meaningful representations.
 
 ```mermaid
 graph TD
@@ -190,7 +190,7 @@ graph TD
     end
 ```
 
-The stored embeddings are indexed using specialized data structures optimized for high-dimensional similarity search. Popular approaches include [Hierarchical Navigable Small World (HNSW)](https://en.wikipedia.org/wiki/Hierarchical_navigable_small_world) graphs and [Locality-Sensitive Hashing (LSH)](https://en.wikipedia.org/wiki/Locality-sensitive_hashing), which allow efficient approximate nearest neighbor search in high-dimensional spaces.
+The stored embeddings are indexed using specialized data structures optimized for high-dimensional similarity search. Popular approaches include [Hierarchical Navigable Small World (HNSW)](https://en.wikipedia.org/wiki/Hierarchical_navigable_small_world) graphs and [Locality-Sensitive Hashing (LSH)](https://en.wikipedia.org/wiki/Locality-sensitive_hashing), which allow efficient approximate nearest neighbor search in high-dimensional spaces. HNSW has largely become the dominant approach in modern vector databases due to its superior performance characteristics.
 
 ### Similarity Computation: Finding Related Content
 
@@ -215,11 +215,6 @@ This approach solves the classic problem with keyword-based search: the mismatch
 
 The search typically returns the closest few matches along with similarity scores, allowing the application to decide how many results to use and what similarity threshold constitutes a good match. This flexibility is crucial for applications like [RAG systems](https://stevengann.com/posts/RAGs-And-Agents/), where you want to include the most relevant context without overwhelming the language model with marginally related information.
 
-### From Google's Origins to Modern Search
-
-This approach to semantic search isn't entirely new—it represents the evolution of techniques that powered early web search engines. [Google's original PageRank algorithm](https://en.wikipedia.org/wiki/PageRank) used different mathematical techniques but shared the core insight that relationships between pieces of content could be used to determine relevance and quality.
-
-Modern vector databases extend this concept by using learned representations rather than hand-crafted features. Instead of analyzing link structures and keyword frequencies, they operate in the semantic space created by embedding models trained on vast text corpora. This allows them to understand meaning and context in ways that traditional search engines struggle with.
 
 ## Embeddings in Large Language Models
 
