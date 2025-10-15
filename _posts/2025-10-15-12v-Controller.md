@@ -15,6 +15,11 @@ I haven't done a circuit analysis in a while, and a friend of mine was working o
 
 Here is the full circuit, or at least the basic parts for it to work but without any extras. There's an Arduino (or really any microcontroller or digital logic) on the left and the load on the right. In this case, the load is a simple light bulb but the circuit can easily handle any DC load as long as the voltage and current are in range for the MOSTFET and optocoupler.
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+> The circuit diagrams on this page are interactive simulations! Try clicking the switch inside the "Arduino".
+{: .prompt-tip }
+<!-- markdownlint-restore -->
 <iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWKIGRStCCmBaMYAoAJRABYAONAZioDYzKQAmc85NUtMJ9qaBAgHMGmAOz0KaWpDZpIBTqOaiepWqWU8ELcAQBOmsgE56TFSnHJSo+Qc4cTZOBfpd4cAgDMyVVY8nG9L7g-HyQTAQA7iB0bKT+zvGuUT5+EomO8tEBCJb2LlApOdwiBVmlNEG0bJWF0bFk6jHVMXSFYOQQAbUBAdRw0ExU5EYUtEy0RlRGYFTgztxy0BowpAQARo0aVJYIND6yBAAeKKRIpGBICEZxHWTMGgAyAPYAhgAmBADO4KQaahomDItsgIAAXPQAVywxF+-yaYD+ZDArismF4MAE0SBcSaZlUTXkJ24QSMPBxMSM5weIAAgnp3pCAJYAO2eG3AYCUnDmTDu8SU8mE+IKIukskKQA" height="600px" width="100%"></iframe>
 
 A working circuit is nice but understanding how it works and why I designed it this way is even better, so let's break it down.
