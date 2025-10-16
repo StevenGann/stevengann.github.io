@@ -122,6 +122,12 @@ Since the Arduino's 5v and the load's 12v are both being provided externally, th
 
 Suppose there is a single supply, such as if a DC-to-DC converter on-board is providing the Arduino 5v from the 12v supply. Then a truly isolated Ground isn't an option, but there's still things you can do. Keeping the grounds split as before and connecting at a single point through a **polyfuse** and an **inductor** will help provide safety. The polyfuse will protect the Arduino in the case of the 12v Ground being brought to a high enough voltage to pass substantial current to the Arduino side. An inductor will resist the electrical noise induced by current switching, converting the high frequency noise into a small fluctuating magnetic field that is smoothly dissipated.
 
+### The Improved Circuit
+
+Here's our circuit with all the mitigations in place. Experiment with it and try things like reversing the 12v supply, shorting the load, putting an inductor in series with the load, etc.
+
+<iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWKsxgJwBYDMAmNA2ADh33wHZ18sQFIaa6EBTAWlQCgAlEDQunMjh58QOHBiiSMdMELrzoCdgHNhjMvjUh8kQpMjtpZUYJ74JAoQhx6w7AE4mhGAk5oapZA4+l0Xm33dNGXg4dgAzHlweV14-V2iwRWRIHActOIzokIMAdxAsIhiAuGKodnzsZ1jS-3LKkQQPQKbgiq0EWQ6PPIKijHM+vSxC8rBCCAQdAtGpv2yC0rAlnAUJGAx2ACMaDAksa20wagwwdfYAD20BArQIIjosTB5RCQAZAHsAQwATdgBncB7MwWXQgyQQAAu9gArkwuECJAMJGckWBglJGPpkEp8qs9Mi3ISDFdZJonkJ8bckBYJABBew-GEASwAdh9tuBxgUpqJ0NoMHIVOBpq0RXQdHp5IYcNQsNzSEh5ZoBNK8aYxej1G0flpLFoRirwAA5XybXWnALRS0zI1gU1wTb5QrDUY2w31Hjo20G0a9TJVL1WoXSCRzH2ZD0KSD4Y7aaBkah0cJfAA2-3h+XDgYD2XYQA" height="600px" width="100%"></iframe>
+
 ## Conclusion
 
 This 12V controller circuit demonstrates the fundamental principles of solid-state switching and microcontroller interfacing. By combining an optocoupler for voltage level translation and electrical isolation with a MOSFET for efficient load switching, we've created a versatile control system capable of handling a wide variety of DC loads from LED strips to motors. The circuit's layered protection strategy—current limiting resistors, flyback diodes, reverse polarity protection, and isolated grounds—transforms a simple academic design into a robust, production-ready solution that can withstand real-world failure modes.
