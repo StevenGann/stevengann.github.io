@@ -1,5 +1,5 @@
 ---
-title: The Road To Homelab
+title: Homelab Lessons 1 - The Road To Homelab
 description: A retrospective on the bumpy road from a simple file server to a true homelab, the mistakes made and lessons learned along the way
 categories: [Homelab]
 tags: [homelab, self-hosting, servers, raspberry-pi, truenas, jellyfin, home-assistant]
