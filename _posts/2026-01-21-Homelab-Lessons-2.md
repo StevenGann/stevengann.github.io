@@ -93,15 +93,70 @@ THat's a whole lot, and it doesn't include a lot of smaller things like home aut
 
 ## The Monolith
 
-The Monolith is the shining centerpiece of the lab, as the name might imply. It features a 24-core Xeon CPU, 128GB of RAM, multiple NICs, a ton of storage, and even a Quadro RTX 8000 GPU. The Monolith is the only system directly exposed to the Internet because its primary purpose is to provide remotely accessible services and to store all my data. The system itself runs [TrueNAS](https://www.truenas.com/) and all the services are in Docker containers. Many of the common services, like [Jellyfin](https://jellyfin.org/) and [Minecraft](https://craftycontrol.com/), are deployed straight from the TrueNAS app catalog, but for some more niche applications like [BlueMap](https://bluemap.bluecolored.de/) I use Docker Compose.
+The Monolith is the shining centerpiece of the lab, as the name might imply. It features a 24-core Xeon CPU, 128GB of RAM, multiple NICs, a ton of storage, and even a Quadro RTX 8000 GPU. The Monolith is the only system directly exposed to the Internet because its primary purpose is to provide remotely accessible services and to store all my data. The system itself runs [TrueNAS](https://www.truenas.com/) and all the services are in Docker containers. Many of the common services, like [Jellyfin](https://jellyfin.org/), [Navidrome](https://www.navidrome.org/), [Pi-Hole](https://pi-hole.net/), and [Minecraft](https://craftycontrol.com/), are deployed straight from the TrueNAS app catalog, but for some more niche applications like [BlueMap](https://bluemap.bluecolored.de/) I use Docker Compose.
 
 The hardware is optimized for the tasks the Monolith is intended for. The CPU has 24 cores at only 2.4 GHz, making it very good for handling a large number of light applications. The huge collection of disks (12 HDDs and 4 SSDs currently) lets it provide a centralized repository of media, databases, and any other data that needs to be stored and served. The big 60TB pool is built from 8TB HDDs in a [ZFS](https://openzfs.org/) RAIDZ2 configuration, with a 250GB SSD set up as cache. THe built-in support for ZFS was a major selling point for TrueNAS for me because of features like software RAIDZ and assigning pools an SSD to serve as fast read/write cache. ZFS is open source and could be installed in virtually any Linux distro, but after a lot of time spent trying to DIY every aspect I have learned the value of built-in support. The Quadro RTX 8000 GPU might seem out of place, but it is there almost solely for media transcoding. Jellyfin uses it to transcode videos with less CPU load when multiple users are streaming simultaneously, and [Unmanic](https://unmanic.app/) uses it to systematically transcode all the videos in my media collection to make them more uniform and compress them to more manageable sizes.
+
+```mermaid
+architecture-beta
+
+    group network(cloud)[Network]
+    service tengig_switch(server)[10G Switch] in network
+
+    group highspeed(server)[10G Devices]
+    service monolith(server)[Monolith] in highspeed
+    service compute(server)[Compute] in highspeed
+    service workstation(server)[Workstation] in highspeed
+
+    group monolith_svc(cloud)[Monolith Services]
+    service storage(disk)[60TB Storage] in monolith_svc
+    service jellyfin(database)[Jellyfin] in monolith_svc
+    service navidrome(database)[Navidrome] in monolith_svc
+    service nextcloud(cloud)[NextCloud] in monolith_svc
+    service minecraft(server)[Minecraft] in monolith_svc
+    service bluemap(server)[BlueMap] in monolith_svc
+
+    tengig_switch:B -- T:monolith
+    tengig_switch:B -- T:compute
+    tengig_switch:B -- T:workstation
+    monolith:R -- L:storage
+    monolith:R -- L:jellyfin
+    monolith:R -- L:navidrome
+    monolith:R -- L:nextcloud
+    monolith:R -- L:minecraft
+    monolith:R -- L:bluemap
+
+```
 
 ## The Compute Server
 
 The Compute server is less imaginatively named, which is ironic since it is mostly intended for generative AI applications. Equipped with a 16-core 3.6 GHz i7 CPU, 128GB of RAM, and two GeForce RTX 8000 Ada GPUs, it is more structured for a few heavy loads. I chose to run TrueNAS on this system as well, because I had become so fond of it already and having similar confinurations on it and the Monolith will make it easier to move services off the Monolith later, if needed. For example, I am considering moving Minecraft onto this server if the Monolith's CPU becomes a bottleneck.
 
 Compared to the Monolith, the Compute server has very little going on. Most importantly, it has an [Ollama](https://ollama.com/) container for running AI models which allows other applications on other systems to leverage AI. At present, the only other application running on the server is [ComfyUI](https://www.comfy.org/), which is set up for generating images, videos, audio, and even 3D models.
+
+```mermaid
+architecture-beta
+
+    group network(cloud)[Network]
+    service tengig_switch(server)[10G Switch] in network
+
+    group highspeed(server)[10G Devices]
+    service monolith(server)[Monolith] in highspeed
+    service compute(server)[Compute] in highspeed
+    service workstation(server)[Workstation] in highspeed
+
+    group compute_svc(cloud)[Compute Services]
+    service gpus(server)[RTX 8000 GPUs] in compute_svc
+    service ollama(server)[Ollama] in compute_svc
+    service comfyui(server)[ComfyUI] in compute_svc
+
+    tengig_switch:B -- T:monolith
+    tengig_switch:B -- T:compute
+    tengig_switch:B -- T:workstation
+    compute:R -- L:gpus
+    compute:R -- L:ollama
+    compute:R -- L:comfyui
+```
 
 ## The Workstation
 
@@ -111,6 +166,56 @@ At present, it is just running a debloated Windows 10 install, but in the near f
 
 ## The Automation Pi
 
-Sitting between all these beefy servers, one system is different from the rest: A single Raspberry Pi 5 sits quietly, serving its invisible job. This Pi is running the official Home Assistant OS image, with Matter and Mosquito MQTT installed as extensions.
+Sitting between all these beefy servers, one system is different from the rest: A single Raspberry Pi 5 sits quietly, serving its invisible job. This Pi is running the official Home Assistant OS image, with Matter and Mosquito MQTT installed as extensions. I had originally intended to run all three of these services as containers on the Monolith, but I discovered that the Matter service for Home Assistant wasn't able to be run within a container. I possibly could have found a workaround, but the "Happy Path" was to grab a spare Pi and dedicate it to home automantion. In practice, this worked extremely well. The Pi 5 is more than powerful enough for the job and so far it has had much better uptime than the Monolith. The Pi isn't being tinkered on, new services aren't constantly being installed, there's just less that can go wrong on it. Dedicating a Pi to a single group of services has worked so well I am considering moving more services from the Monolith onto a few more Raspberry Pis, services like Pi-Hole that are lightweight and benefit from high uptime.
+
+```mermaid
+architecture-beta
+
+    group network(cloud)[Network]
+    service poe_switch(server)[PoE Switch] in network
+
+
+    group clients(server)[Clients]
+    service ha_pi(server)[HA Pi] in clients
+
+    group ha_svc(cloud)[Home Automation]
+    service mqtt(database)[MQTT] in ha_svc
+    service matter(database)[Matter] in ha_svc
+    service ha(database)[Home Assistant] in ha_svc
+
+    poe_switch:B -- T:ha_pi
+    ha_pi:R -- L:mqtt
+    ha_pi:R -- L:matter
+    ha_pi:R -- L:ha
+```
 
 ## Networking Infrastructure
+
+A homelab is only as good as its network, and realizing that helped me understand why many homelabs are a handful of Raspberry Pis and a ton of networking infrastructure. A typical home network is a modem and router and maybe a switch if you're fancy, and then to share things online you forward ports and give everyone your home IP and hope for the best.
+
+A few months ago, a friend who owns [an IT company](https://techmayer.com/) was trying to convince me to give Ubiquiti a chance. I was hesitant so he loaned me a Cloud Gateway Max (UCG-Max) to replace my bunch of Netgear routers running OpenWRT. Once we got the thing set up it blew my mind with all the features and flexibility, not to mention how well it performed compared to Netgear routers of the same price range. I was sold and soon dove head-first into the Ubiquiti ecosystem. I took out all my networking infrastructure and replaced it with a USW Flex 2.5G 8 PoE, a trio of USW Flex 2.5G 5s, and two U6+ wi-fi access points.
+
+```mermaid
+architecture-beta
+    group wan(cloud)[WAN]
+    service cloudflare(cloud)[Cloudflare] in wan
+    service vpn(cloud)[VPN] in wan
+    service internet(internet)[Internet] in wan
+    service modem(server)[Fiber Modem] in wan
+
+    group network(cloud)[Network]
+    service ucg(internet)[UCG Gateway] in network
+    service poe_switch(server)[PoE Switch] in network
+    service tengig_switch(server)[10G Switch] in network
+    service ap1(server)[WiFi AP 1] in network
+    service ap2(server)[WiFi AP 2] in network
+
+    vpn:R -- L:ucg
+    cloudflare:R -- L:internet
+    internet:R -- L:modem
+    modem:R -- L:ucg
+    ucg:R -- L:poe_switch
+    poe_switch:R -- L:tengig_switch
+    poe_switch:B -- T:ap1
+    poe_switch:B -- T:ap2
+```
