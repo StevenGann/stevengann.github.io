@@ -89,7 +89,7 @@ architecture-beta
     ha_pi:R -- L:ha
 ```
 
-THat's a whole lot, and it doesn't include a lot of smaller things like home automation sensors and controllers, the Synology NAS that's still in service, 3D printers, security cameras, and more. Those things are all worth their own blog post later, we're focusing on infrastructure today.
+That's a whole lot, and it doesn't include a lot of smaller things like home automation sensors and controllers, the Synology NAS that's still in service, 3D printers, security cameras, and more. Those things are all worth their own blog post later, we're focusing on infrastructure today.
 
 ## The Monolith
 
@@ -193,7 +193,11 @@ architecture-beta
 
 A homelab is only as good as its network, and realizing that helped me understand why many homelabs are a handful of Raspberry Pis and a ton of networking infrastructure. A typical home network is a modem and router and maybe a switch if you're fancy, and then to share things online you forward ports and give everyone your home IP and hope for the best.
 
-A few months ago, a friend who owns [an IT company](https://techmayer.com/) was trying to convince me to give Ubiquiti a chance. I was hesitant so he loaned me a Cloud Gateway Max (UCG-Max) to replace my bunch of Netgear routers running OpenWRT. Once we got the thing set up it blew my mind with all the features and flexibility, not to mention how well it performed compared to Netgear routers of the same price range. I was sold and soon dove head-first into the Ubiquiti ecosystem. I took out all my networking infrastructure and replaced it with a USW Flex 2.5G 8 PoE, a trio of USW Flex 2.5G 5s, and two U6+ wi-fi access points.
+A few months ago, a friend who owns [an IT company](https://techmayer.com/) was trying to convince me to give Ubiquiti a chance. I was hesitant so he loaned me a Cloud Gateway Max (UCG-Max) to replace my bunch of Netgear routers running OpenWRT. Once we got the thing set up it blew my mind with all the features and flexibility, not to mention how well it performed compared to Netgear routers of the same price range. I was sold and soon dove head-first into the Ubiquiti ecosystem. I took out all my networking infrastructure and replaced it with a USW Flex 2.5G 8 PoE, a trio of USW Flex 2.5G 5s, and two U6+ wi-fi access points. I don't want to turn this into an ad for Ubiquiti (especially since they aren't paying me), but I have never been happier with networking equipment. The Teleport feature is a wrapper around TailScale VPN that lets me access my whole LAN remotely, so I don't need to forward ports for anything unless I want to share something publicly. Incoming traffic can be filtered by all kind of criteria, such as GeoIP. Additionally, the UniFi tools for wi-fi made it very simple to have a dedicated 2.4GHz SSID for home automation devices to avoid them crowding the channels that I want for higher priority devices like cellphones.
+
+Aside from the Ubiquity devices, I obtained a 10Gbps switch from a coworker and connected the Monolith, Compute, and Workstation servers to it to make sure the network won't be a bottleneck between those systems. The rest of the networking infrastructure is software. For dealing with incoming connections, I use CloudFlare to protect from DDoS or suspicious connections, and dynamic DNS from NoIP so I don't need to share raw IPs and keep them updated. A container on the Monolith runs [DDNS Updater](https://github.com/qdm12/ddns-updater) to make sure the DDNS domains stay updated every five minutes.
+
+For outgoing traffic, I have a Pi-Hole container running on the Monolith. Pi-Hole serves as a basic DNS proxy, blocking DNS requests to domains like ad servers, telemetry servers, and known phishing or other malicious servers. Any requests that don't get blocked are passed along to Cloudflare's DNS service with Google's DNS as a fallback when Cloudflare is down.
 
 ```mermaid
 architecture-beta
@@ -219,3 +223,16 @@ architecture-beta
     poe_switch:B -- T:ap1
     poe_switch:B -- T:ap2
 ```
+
+## What Now?
+
+I don't know anyone who considers their homelab "complete". It is a living thing that will always require maintenance at least and benefits from careful planning and cultivation. A homelab is like a garden or an aquarium, I suppose. I mentioned a few plans in the text above, but there's no end to the exciting ideas I want to deploy.
+
+- Rebuild Workstation server into a VM hypervisor
+- Add additional Raspberry Pis to handle lightweight high-uptime services like Pi-Hole, DDNS Updater, etc.
+- Migrate off of Crafty Control for Minecraft server management and into a more generic game server manager that supports server instances spread across systems.
+- Deploy n8n to handle scheduled maintenance tasks, simple troubleshooting, and notifying me when there's a significant issue.
+- Construct and deploy a full-featured home AI agent that can integrate with Home Assistant, Jellyfin, NextCloud, etc. while interacting with family members through voice.
+- Move services to an SSO so the services I share with friends only require one login.
+
+Next up, I'll discuss my home automation setup!
