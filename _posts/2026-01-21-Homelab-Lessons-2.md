@@ -235,4 +235,4 @@ I don't know anyone who considers their homelab "complete". It is a living thing
 - Construct and deploy a full-featured home AI agent that can integrate with Home Assistant, Jellyfin, NextCloud, etc. while interacting with family members through voice.
 - Move services to an SSO so the services I share with friends only require one login.
 
-Next up, I'll discuss my home automation setup!
+Keep a look out for more posts about my homelab as it continues to evolve!
