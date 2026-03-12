@@ -12,7 +12,7 @@ I finally decided to bite the bullet and build a Raspberry Pi cluster for my hom
 
 ## What's a Cluster, and Why Do I Want One?
 
-At its core, a cluster is nothing more than a bunch of independent computer systems all networked together for a common goal. Probably the simplest is the old-school [Beowulf cluster](https://en.wikipedia.org/wiki/Beowulf_cluster) which is a bunch of PCs put together to work on a single task in parallel. I built a Beowulf cluster of my own in college, also named Hyperion: a stack of 10 mini desktop PCs that ran on 12V, each with a Core2 Duo CPU and 2GB of RAM, running Windows XP. I set them up in a stack with the same [Dropbox](https://www.dropbox.com/) folder synchronized across all of them and wrote a Python script that would monitor for [Blender](https://www.blender.org/) files to appear in a specific folder. When a `*.blend` file showed up, each node would open it and render every 10th frame with an offset of N—each node configured with a different offset. The rendered images went into a different Dropbox folder that synced back to my main desktop, where I could convert the sequence of frames into a video file. Crude, but it worked.
+At its core, a cluster is nothing more than a bunch of independent computer systems all networked together for a common goal. Probably the simplest is the old-school [Beowulf cluster](https://en.wikipedia.org/wiki/Beowulf_cluster) which is a bunch of PCs put together to work on a single task in parallel. I built a Beowulf cluster of my own in college, also named Hyperion: a stack of 10 mini desktop PCs that ran on 12V, each with a Core2 Duo CPU and 2GB of RAM, running Windows XP. I set them up in a stack with the same Dropbox folder synchronized across all of them and wrote a Python script that would monitor for [Blender](https://www.blender.org/) files to appear in a specific folder. When a `*.blend` file showed up, each node would open it and render every 10th frame with an offset of N—each node configured with a different offset. The rendered images went into a different Dropbox folder that synced back to my main desktop, where I could convert the sequence of frames into a video file. Crude, but it worked.
 
 ```mermaid
 flowchart LR
@@ -56,11 +56,11 @@ With the Pis in the sleds and the HATs installed, all that remained was to plug 
 
 ![Cluster mounted in rack chassis](/assets/img/2026-03-12-Hyperion-Cluster/04_racked_up.jpg)
 
-## First Boot — And the First PoE Problems
+## First Boot — And the First Problems
 
 I was greeted with all but one of the Pis starting up. Within a few minutes, though, four had gone dark. This is where my troubles began.
 
-## Troubleshooting PoE Power Issues
+## Shooting Troubles
 
 I knew pretty quickly the problem was related to PoE. I designed and debugged PoE systems back when I was an embedded systems designer, so I knew what to look for. I could hear a high-pitched, stuttering whine coming from the transformers on some of the PoE HATs, and the 5V indicator LEDs were turning on and then fading out. My first thought was poor connections between the PoE regulators and the Pis' Ethernet ports, but attempts to improve the contacts didn't help at all. In fact, as I disassembled and reassembled the stacks trying to get better connections, they seemed to be getting worse—even dying completely.
 
@@ -70,7 +70,7 @@ I looked under the HAT's PCB at the SMT ferrite inductor soldered to the undersi
 
 ![Pis failing to boot—LEDs fading, PoE issues](/assets/img/2026-03-12-Hyperion-Cluster/05_the_problem.jpg)
 
-That specific Pi HAT was shot. Even after replacing the blown cap, the PoE regulator refused to start up. Fortunately, the Pi and SSD were unharmed, so after swapping it out and covering the inductor with a square of electrical tape, all was well. I repeated this remediation across the other 9 Pis and was rewarded with a fully operational 10-node Raspberry Pi cluster—exactly the kind of resilient, low-power compute layer I wanted to add to my [existing homelab setup](/2026/01/21/homelab-lessons-2/).
+That specific Pi HAT was shot. Even after replacing the blown cap, the PoE regulator refused to start up. Fortunately, the Pi and SSD were unharmed, so after swapping it out and covering the inductor with a square of electrical tape, all was well. I repeated this remediation across the other 9 Pis and was rewarded with a fully operational 10-node Raspberry Pi cluster—exactly the kind of resilient, low-power compute layer I wanted to add to my [existing homelab setup](/posts/Homelab-Lessons-2/).
 
 ![Electrical tape insulating the inductor from the heatsink](/assets/img/2026-03-12-Hyperion-Cluster/06_the_solution.jpg)
 
@@ -137,4 +137,4 @@ flowchart TB
 
 With the hardware sorted, the Hyperion cluster is ready for the next phase: software configuration and deployment into the homelab. In the next post, I'll cover the OS setup, container orchestration, and how these 10 nodes will fit into the rest of my infrastructure as a Kubernetes-style cluster.
 
-If you're curious how this all fits into the bigger picture, you can read the earlier parts of this series: [Homelab Lessons 1 - The Road To Homelab](/2026/01/20/homelab-lessons-1/) and [Homelab Lessons 2 - My Little Kingdom](/2026/01/21/homelab-lessons-2/).
+If you're curious how this all fits into the bigger picture, you can read the earlier parts of this series: [Homelab Lessons 1 - The Road To Homelab](/posts/Homelab-Lessons-1/) and [Homelab Lessons 2 - My Little Kingdom](/posts/Homelab-Lessons-2/).
