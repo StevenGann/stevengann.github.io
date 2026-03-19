@@ -110,3 +110,5 @@ I worked with GraphTec as a consultant engineer to assist them with embedded sys
 [Logus Microwave](https://logus.com/)
 
 While at Logus Microwave, my primary duty was in the design, development, and production of updated version of several products. The simplest of these was to replace a purely TTL circuit for the company’s patented motor control with an MSP-430 MCU to improve switching reliability and monitor the lifespan of the mechanism. The most ambitious was designing a version with PoE and a web interface, and then a variation that adapted the design to a single square inch. These were my first serious design projects as a professional engineer, and they represented formative learning experiences while I applied much of my academic theory to real-world applications.
+
+📄 [Resume PDF](/assets/resume/Resume.Steven-Gann.pdf)
