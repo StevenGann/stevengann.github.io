@@ -10,7 +10,7 @@ title: Résumé
 ---
 
 # Steven Gann
-Embedded Systems Specialist | Hardware Validation Engineer
+Embedded Systems Specialist | Hardware Validation & Test Engineer
 
 ## Contact
 - 📧 StevenGannJr@gmail.com
@@ -33,7 +33,7 @@ Altium, Visual Studio, VS Code, Eclipse, Code Composer Studio, Altera Quartus, L
 C, C++, C#, Rust, Java, Assembly (MSP-430, PIC16, PIC24, AVR, x86, ARM, Z80), Python, Bash, OpenSCAD
 
 ### Development Platforms
-Windows, GNU/Linux (Debian, Arch), Unix, FreeRTOS, Android (Java and .NET), iOS (Objective-C), CUDA
+Windows, GNU/Linux (Debian, Arch), Unix, FreeRTOS, Android (Java and .NET), iOS (Objective-C), CUDA, Docker, Kubernetes
 
 ### Technology Proficiencies
 SIMD, .NET, Object Oriented Programming, Data Oriented Design, Hardware emulation, Realtime DSP, AI applications (LLMs, Agentic AI, RAG), CUDA, OpenGL
@@ -41,8 +41,8 @@ SIMD, .NET, Object Oriented Programming, Data Oriented Design, Hardware emulatio
 ## Work Experience
 
 **Meta Platforms, Inc.** Menlo Park, CA \
-_Manufacturing Test Engineer_ **2025-Present** \
-As a Manufacturing Test Engineer at Meta, I work within the infrastructure team to develop and maintain validation tests for the many server racks deployed at Meta's datacenters. Building on my past experiences, I solve problems quickly and ensure a consistent workflow that scales out to the most extensive compute infrastructure on Earth.
+_Senior Manufacturing Test Engineer_ **2025-2026** \
+As a Test Engineer at Meta, I worked within the Infrastructure group to manage the manufacturing, testing, and deployment of server platforms through the L10 to L12 phases, until they shipped to the datacenters. I was responsible for the AMD MI350 Training and Inference platforms. In addition to my primary role I served as an AI deployment SME, providing training on AI tools and developing solutions my team could leverage to improve their productivity.
 
 **NVIDIA Corporation** Santa Clara, CA \
 _Hardware Validation Engineer_ **2023-2025** \
