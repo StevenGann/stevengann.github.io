@@ -1,5 +1,5 @@
 ---
-title: Agents of Chaos: The Guppy and Jeeves Story
+title: Agents of Chaos - The Guppy and Jeeves Story
 description: Experimenting with Hermes Agent and my first experience with rogue AI
 categories: [Programming, AI]
 tags: [ai, self-improving-ai, home-assistant, hermes-agent, ai-safety, ai-alignment, homelab, discord, kubernetes, philosophy]
