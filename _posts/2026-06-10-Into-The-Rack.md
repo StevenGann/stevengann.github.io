@@ -21,8 +21,10 @@ The centerpiece is a 42U server rack, now living in my garage. After years of st
 
 Power is its own small system. There's a **networked PDU** with per-outlet metering, plus **two StarTech "dumb" PDUs** for everything else. The four servers (**Akasha, Thoth, Heimdall, and Hyperion**) each plug straight into the metered PDU, so I can watch every one of them draw power *individually*. (That's how I caught the Thoth driver-branch idle-power win I'll get to below; I could actually see the number drop.) Everything else hangs off the two dumb PDUs, which themselves feed back into the metered one, so the lab's total draw nets out through a single set of eyes too. Per-host visibility where it matters, aggregate everywhere else.
 
+<!-- TODO: add photo when available
 ![The new 42U rack in the garage, fully populated](/assets/img/2026-06-10-Into-The-Rack/01_the_rack.jpg)
 _The whole lab in one frame: every host, switch, and the Pi cluster, finally racked and labeled._
+-->
 
 The detail that's changed my day-to-day the most is mundane: a **monitor and a pull-out keyboard tray** mounted right in the rack. For years, "I need to see the console on this box" meant dragging a spare monitor and keyboard out to the garage, finding a flat surface, and crouching. Now there's a screen and a keyboard at eye level, permanently. Combined with the KVM setup I'll get to below, the rack has a real local console for the first time, and that single quality-of-life upgrade has made me far more willing to actually maintain the thing.
 
@@ -73,8 +75,10 @@ If Hyperion is the muscle and Akasha is the memory, **Heimdall** is the gatekeep
 
 That last one is also the one honest piece of technical debt I confessed to [last post](/posts/Hyperion-Takes-Flight/), and I want to be straight that it's *not* fully paid off yet. The control plane still runs in a bridge-networked container on Heimdall, which means it can't join the cluster's overlay network, so a couple of conveniences (live metrics, mainly) still don't work and real workloads stay pinned to the Pis. I said the proper fix was to relocate the control plane onto a host where it can join the overlay directly, and that's exactly what's coming: it's moving to a **dedicated Pi** of its own. That's a near-future project, big enough to deserve its own post when I actually pull it off, so I won't pretend it's done here. For now, the debt is still on the books, just with a firm plan and a date getting closer.
 
+<!-- TODO: add diagram image when available
 ![Diagram of the new homelab architecture after the overhaul](/assets/img/2026-06-10-Into-The-Rack/02_architecture.png)
 _The new layout at a glance: Akasha as pure storage, Thoth on GPUs, Hyperion running the workloads, and Heimdall at the edge with the proxy, DNS, load balancer, and control plane. (Live version below.)_
+-->
 
 ```mermaid
 architecture-beta
