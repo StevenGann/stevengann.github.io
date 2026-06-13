@@ -2,7 +2,7 @@
 title: Homelab Lessons 4 - Hyperion Takes Flight
 description: Turning ten bare Raspberry Pis into a self-managing k3s cluster — the dead ends, the pivot to NixOS, and the GitOps payoff
 categories: [Homelab]
-tags: [homelab, raspberry-pi, kubernetes, nixos, k3s, gitops]
+tags: [homelab, raspberry-pi, kubernetes, nixos, k3s, gitops, infrastructure-as-code, metallb]
 mermaid: true
 ---
 
@@ -130,6 +130,9 @@ A k3s cluster needs a control plane — the "brain" that schedules workloads and
 I'll own a piece of honest technical debt here, because real homelabs have it and pretending otherwise helps no one. Running the control plane in a *bridge-networked* container creates a networking quirk: the workers can't reach the control plane's internal cluster-overlay endpoint. Everything important works — the Pis register, take workloads, and report health — but a couple of conveniences (like live resource metrics) don't, because that traffic rides the overlay the workers can't see.
 
 My workaround for now is a [taint](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) on the control-plane node so no app workloads schedule onto it, plus a scheduling rule that pins all real workloads to the Pi cluster where the networking is clean. It's not the final answer — the proper fix is to relocate the control plane onto a host where it can join the overlay directly — but it's stable, it's documented, and it lets the cluster do real work today. Known debt, written down, with a plan. That's the homelab way.
+
+> **Update:** The lab was later rebuilt into a 42U rack with hosts renamed under a mythological scheme, reworking where the control plane and edge services like Heimdall live. See [Homelab Lessons 5 - Into the Rack](/posts/Into-The-Rack/).
+{: .prompt-info }
 
 ## Self-Managing with GitOps
 

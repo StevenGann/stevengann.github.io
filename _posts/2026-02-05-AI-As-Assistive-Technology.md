@@ -2,16 +2,16 @@
 title: Generative AI As Assistive Technology
 description: A personal account of how AI assistants and RAG systems serve as essential assistive technology for managing memory and cognitive challenges
 categories: [AI, Personal]
-tags: [ai, assistive-technology, rag, obsidian, llm, memory, productivity, vulcanai]
+tags: [ai, assistive-technology, rag, obsidian, llm, memory, productivity, vulcanai, accessibility]
 meta_description: "How generative AI and RAG systems serve as powerful assistive technology for people with memory and cognitive differences. A personal journey from notebooks to AI-powered knowledge management."
 keywords: "AI assistive technology, RAG retrieval augmented generation, Obsidian notes, memory assistance, cognitive support, AI accessibility, personal knowledge management, VulcanAI"
 ---
 
 ## Introduction
 
-AI has been a passion of mine for a long time. Back in high school, I implemented neural networks to make 2D ragdolls learn to walk, control bots in games, and more. I was fascinated with the potential for AI to function like artificial life and was always playing with emergent behavior.
+AI has been a passion of mine for a long time. Back in high school, I implemented [neural networks](/posts/Neural-Networks/) to make 2D ragdolls learn to walk, control bots in games, and more. I was fascinated with the potential for AI to function like artificial life and was always playing with emergent behavior.
 
-Fast forward to the age of LLMs, which were mind-blowing but I struggled to find a great use for generating text with a model that was limited to the contents of its training data. When I was introduced to [RAGs](https://stevengann.com/posts/RAGs-And-Agents/) everything clicked for me. I realized that modern AI had the potential to assist me and others like me in ways that nothing else ever has.
+Fast forward to the age of LLMs, which were mind-blowing, but I struggled to find a great use for generating text with a model that was limited to the contents of its training data. When I was introduced to [RAGs](https://stevengann.com/posts/RAGs-And-Agents/) everything clicked for me. I realized that modern AI had the potential to assist me and others like me in ways that nothing else ever has.
 
 
 ## My Problem and My Journey
@@ -34,8 +34,11 @@ For a lot of people, AI assistants are a novelty or just a trivial way of avoidi
 
 Other AI infrastructure has been proving handy for me also. Online meetings can be transcribed but more recently they can even have AI-generated notes that capture action items and discussion topics better than a human taking minutes. I am awash in e-mails and chat messages at work, but with AI tools I can have a daily briefing generated every morning so I can find where I left off the previous day instead of just dropping the ball. More and more, AI is helping take some of the cognitive burden and compensate for my faulty memory so I can focus on work that matters.
 
+> **Update:** This home-assistant and daily-briefing idea later grew into a dedicated self-hosted AI with a structured memory system. See [Gregory, The AI That Got Too Smart](/posts/Gregory/).
+{: .prompt-info }
+
 ## Anti-AI Sentiment and Stigma
 
-Unfortunately, AI has become a very divisive topic. This is certainly understandable and there's a lot of very valid issues to be dealt with regarding how modern AI is trained, deployed, and used. From environmental concerns to ethical problems to intellectual property rights. Unfortunately, these issues have led many to be opposed to AI in general, regardless of how it is being used.
+Unfortunately, AI has become a very divisive topic. This is certainly understandable and there are a lot of very valid issues to be dealt with regarding how modern AI is trained, deployed, and used. From environmental concerns to ethical problems to intellectual property rights. Unfortunately, these issues have led many to be opposed to AI in general, regardless of how it is being used.
 
 I make an effort to talk about how AI is helping me function in an increasingly challenging world in hopes that the anti-AI crowd might open their minds to think that maybe _some_ AI isn't so bad.

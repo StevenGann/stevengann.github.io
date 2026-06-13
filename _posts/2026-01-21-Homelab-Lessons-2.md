@@ -2,13 +2,13 @@
 title: Homelab Lessons 2 - My Little Kingdom
 description: Reviewing my current homelab's hardware and software, and the hard-earned experience that drove those decisions
 categories: [Homelab]
-tags: [homelab, self-hosting, servers, networking, docker, truenas]
+tags: [homelab, self-hosting, servers, networking, docker, truenas, zfs, jellyfin, home-assistant, ubiquiti, ollama, raspberry-pi]
 mermaid: true
 ---
 
 ## Introduction
 
-In the previous post, I walked through the evolutionary journey from a simple file server to a full homelab. Now let's take a look at what that homelab actually looks like today and why.
+In the [previous post](/posts/Homelab-Lessons-1/), I walked through the evolutionary journey from a simple file server to a full homelab. Now let's take a look at what that homelab actually looks like today and why.
 
 ## The Architecture
 
@@ -95,7 +95,7 @@ That's a whole lot, and it doesn't include a lot of smaller things like home aut
 
 The Monolith is the shining centerpiece of the lab, as the name might imply. It features a 24-core Xeon CPU, 128GB of RAM, multiple NICs, a ton of storage, and even a Quadro RTX 8000 GPU. The Monolith is the only system directly exposed to the Internet because its primary purpose is to provide remotely accessible services and to store all my data. The system itself runs [TrueNAS](https://www.truenas.com/) and all the services are in Docker containers. Many of the common services, like [Jellyfin](https://jellyfin.org/), [Navidrome](https://www.navidrome.org/), [Pi-Hole](https://pi-hole.net/), and [Minecraft](https://craftycontrol.com/), are deployed straight from the TrueNAS app catalog, but for some more niche applications like [BlueMap](https://bluemap.bluecolored.de/) I use Docker Compose.
 
-The hardware is optimized for the tasks the Monolith is intended for. The CPU has 24 cores at only 2.4 GHz, making it very good for handling a large number of light applications. The huge collection of disks (12 HDDs and 4 SSDs currently) lets it provide a centralized repository of media, databases, and any other data that needs to be stored and served. The big 60TB pool is built from 8TB HDDs in a [ZFS](https://openzfs.org/) RAIDZ2 configuration, with a 250GB SSD set up as cache. THe built-in support for ZFS was a major selling point for TrueNAS for me because of features like software RAIDZ and assigning pools an SSD to serve as fast read/write cache. ZFS is open source and could be installed in virtually any Linux distro, but after a lot of time spent trying to DIY every aspect I have learned the value of built-in support. The Quadro RTX 8000 GPU might seem out of place, but it is there almost solely for media transcoding. Jellyfin uses it to transcode videos with less CPU load when multiple users are streaming simultaneously, and [Unmanic](https://unmanic.app/) uses it to systematically transcode all the videos in my media collection to make them more uniform and compress them to more manageable sizes.
+The hardware is optimized for the tasks the Monolith is intended for. The CPU has 24 cores at only 2.4 GHz, making it very good for handling a large number of light applications. The huge collection of disks (12 HDDs and 4 SSDs currently) lets it provide a centralized repository of media, databases, and any other data that needs to be stored and served. The big 60TB pool is built from 8TB HDDs in a [ZFS](https://openzfs.org/) RAIDZ2 configuration, with a 250GB SSD set up as cache. The built-in support for ZFS was a major selling point for TrueNAS for me because of features like software RAIDZ and assigning pools an SSD to serve as fast read/write cache. ZFS is open source and could be installed in virtually any Linux distro, but after a lot of time spent trying to DIY every aspect I have learned the value of built-in support. The Quadro RTX 8000 GPU might seem out of place, but it is there almost solely for media transcoding. Jellyfin uses it to transcode videos with less CPU load when multiple users are streaming simultaneously, and [Unmanic](https://unmanic.app/) uses it to systematically transcode all the videos in my media collection to make them more uniform and compress them to more manageable sizes.
 
 ```mermaid
 architecture-beta
@@ -130,7 +130,7 @@ architecture-beta
 
 ## The Compute Server
 
-The Compute server is less imaginatively named, which is ironic since it is mostly intended for generative AI applications. Equipped with a 16-core 3.6 GHz i7 CPU, 128GB of RAM, and two GeForce RTX 8000 Ada GPUs, it is more structured for a few heavy loads. I chose to run TrueNAS on this system as well, because I had become so fond of it already and having similar confinurations on it and the Monolith will make it easier to move services off the Monolith later, if needed. For example, I am considering moving Minecraft onto this server if the Monolith's CPU becomes a bottleneck.
+The Compute server is less imaginatively named, which is ironic since it is mostly intended for generative AI applications. Equipped with a 16-core 3.6 GHz i7 CPU, 128GB of RAM, and two GeForce RTX 8000 Ada GPUs, it is more structured for a few heavy loads. I chose to run TrueNAS on this system as well, because I had become so fond of it already and having similar configurations on it and the Monolith will make it easier to move services off the Monolith later, if needed. For example, I am considering moving Minecraft onto this server if the Monolith's CPU becomes a bottleneck.
 
 Compared to the Monolith, the Compute server has very little going on. Most importantly, it has an [Ollama](https://ollama.com/) container for running AI models which allows other applications on other systems to leverage AI. At present, the only other application running on the server is [ComfyUI](https://www.comfy.org/), which is set up for generating images, videos, audio, and even 3D models.
 
@@ -166,7 +166,7 @@ At present, it is just running a debloated Windows 10 install, but in the near f
 
 ## The Automation Pi
 
-Sitting between all these beefy servers, one system is different from the rest: A single Raspberry Pi 5 sits quietly, serving its invisible job. This Pi is running the official Home Assistant OS image, with Matter and Mosquito MQTT installed as extensions. I had originally intended to run all three of these services as containers on the Monolith, but I discovered that the Matter service for Home Assistant wasn't able to be run within a container. I possibly could have found a workaround, but the "Happy Path" was to grab a spare Pi and dedicate it to home automantion. In practice, this worked extremely well. The Pi 5 is more than powerful enough for the job and so far it has had much better uptime than the Monolith. The Pi isn't being tinkered on, new services aren't constantly being installed, there's just less that can go wrong on it. Dedicating a Pi to a single group of services has worked so well I am considering moving more services from the Monolith onto a few more Raspberry Pis, services like Pi-Hole that are lightweight and benefit from high uptime.
+Sitting between all these beefy servers, one system is different from the rest: A single Raspberry Pi 5 sits quietly, serving its invisible job. This Pi is running the official Home Assistant OS image, with Matter and Mosquitto MQTT installed as extensions. I had originally intended to run all three of these services as containers on the Monolith, but I discovered that the Matter service for Home Assistant wasn't able to be run within a container. I possibly could have found a workaround, but the "Happy Path" was to grab a spare Pi and dedicate it to home automation. In practice, this worked extremely well. The Pi 5 is more than powerful enough for the job and so far it has had much better uptime than the Monolith. The Pi isn't being tinkered on, new services aren't constantly being installed, there's just less that can go wrong on it. Dedicating a Pi to a single group of services has worked so well I am considering moving more services from the Monolith onto a few more Raspberry Pis, services like Pi-Hole that are lightweight and benefit from high uptime.
 
 ```mermaid
 architecture-beta
@@ -193,9 +193,9 @@ architecture-beta
 
 A homelab is only as good as its network, and realizing that helped me understand why many homelabs are a handful of Raspberry Pis and a ton of networking infrastructure. A typical home network is a modem and router and maybe a switch if you're fancy, and then to share things online you forward ports and give everyone your home IP and hope for the best.
 
-A few months ago, a friend who owns [an IT company](https://techmayer.com/) was trying to convince me to give Ubiquiti a chance. I was hesitant so he loaned me a Cloud Gateway Max (UCG-Max) to replace my bunch of Netgear routers running OpenWRT. Once we got the thing set up it blew my mind with all the features and flexibility, not to mention how well it performed compared to Netgear routers of the same price range. I was sold and soon dove head-first into the Ubiquiti ecosystem. I took out all my networking infrastructure and replaced it with a USW Flex 2.5G 8 PoE, a trio of USW Flex 2.5G 5s, and two U6+ wi-fi access points. I don't want to turn this into an ad for Ubiquiti (especially since they aren't paying me), but I have never been happier with networking equipment. The Teleport feature is a wrapper around TailScale VPN that lets me access my whole LAN remotely, so I don't need to forward ports for anything unless I want to share something publicly. Incoming traffic can be filtered by all kind of criteria, such as GeoIP. Additionally, the UniFi tools for wi-fi made it very simple to have a dedicated 2.4GHz SSID for home automation devices to avoid them crowding the channels that I want for higher priority devices like cellphones.
+A few months ago, a friend who owns [an IT company](https://techmayer.com/) was trying to convince me to give Ubiquiti a chance. I was hesitant so he loaned me a Cloud Gateway Max (UCG-Max) to replace my bunch of Netgear routers running OpenWRT. Once we got the thing set up it blew my mind with all the features and flexibility, not to mention how well it performed compared to Netgear routers of the same price range. I was sold and soon dove head-first into the Ubiquiti ecosystem. I took out all my networking infrastructure and replaced it with a USW Flex 2.5G 8 PoE, a trio of USW Flex 2.5G 5s, and two U6+ wi-fi access points. I don't want to turn this into an ad for Ubiquiti (especially since they aren't paying me), but I have never been happier with networking equipment. The Teleport feature is a wrapper around TailScale VPN that lets me access my whole LAN remotely, so I don't need to forward ports for anything unless I want to share something publicly. Incoming traffic can be filtered by all kinds of criteria, such as GeoIP. Additionally, the UniFi tools for wi-fi made it very simple to have a dedicated 2.4GHz SSID for home automation devices to avoid them crowding the channels that I want for higher priority devices like cellphones.
 
-Aside from the Ubiquity devices, I obtained a 10Gbps switch from a coworker and connected the Monolith, Compute, and Workstation servers to it to make sure the network won't be a bottleneck between those systems. The rest of the networking infrastructure is software. For dealing with incoming connections, I use CloudFlare to protect from DDoS or suspicious connections, and dynamic DNS from NoIP so I don't need to share raw IPs and keep them updated. A container on the Monolith runs [DDNS Updater](https://github.com/qdm12/ddns-updater) to make sure the DDNS domains stay updated every five minutes.
+Aside from the Ubiquiti devices, I obtained a 10Gbps switch from a coworker and connected the Monolith, Compute, and Workstation servers to it to make sure the network won't be a bottleneck between those systems. The rest of the networking infrastructure is software. For dealing with incoming connections, I use CloudFlare to protect from DDoS or suspicious connections, and dynamic DNS from NoIP so I don't need to share raw IPs and keep them updated. A container on the Monolith runs [DDNS Updater](https://github.com/qdm12/ddns-updater) to make sure the DDNS domains stay updated every five minutes.
 
 For outgoing traffic, I have a Pi-Hole container running on the Monolith. Pi-Hole serves as a basic DNS proxy, blocking DNS requests to domains like ad servers, telemetry servers, and known phishing or other malicious servers. Any requests that don't get blocked are passed along to Cloudflare's DNS service with Google's DNS as a fallback when Cloudflare is down.
 
@@ -234,5 +234,14 @@ I don't know anyone who considers their homelab "complete". It is a living thing
 - Deploy n8n to handle scheduled maintenance tasks, simple troubleshooting, and notifying me when there's a significant issue.
 - Construct and deploy a full-featured home AI agent that can integrate with Home Assistant, Jellyfin, NextCloud, etc. while interacting with family members through voice.
 - Move services to an SSO so the services I share with friends only require one login.
+
+> **Update:** Many of these plans came to pass: the lightweight-service Raspberry Pis grew into the "Hyperion" cluster. See [Homelab Lessons 3 - Rise of Hyperion](/posts/Hyperion-Cluster/).
+{: .prompt-info }
+
+> **Update:** The home AI agent was eventually built as "Gregory." See [Gregory, The AI That Got Too Smart](/posts/Gregory/).
+{: .prompt-info }
+
+> **Update:** The whole lab was later consolidated into a single 42U rack, with hosts renamed and the Monolith rebuilt as dedicated storage and compute machines. See [Homelab Lessons 5 - Into the Rack](/posts/Into-The-Rack/).
+{: .prompt-info }
 
 Keep a look out for more posts about my homelab as it continues to evolve!

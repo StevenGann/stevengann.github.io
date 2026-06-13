@@ -1,19 +1,19 @@
 ---
 title: 12V Controller Circuit Analysis
-description: Analysis of a 12V controller circuit design and operation
+description: A hands-on analysis of a low-side switching circuit using a MOSFET and optocoupler to let an Arduino control 12V DC loads, plus failure modes and protections.
 categories: [Electronics]
-tags: [circuits, voltage-regulation, electronics, diy, control-systems]
+tags: [circuits, voltage-regulation, electronics, diy, control-systems, mosfet, optocoupler, arduino]
 math: true
 mermaid: true
 ---
 
 ## Introduction
 
-I haven't done a circuit analysis in a while, and a friend of mine was working on a project to control a handful of 12v devices with an Arduino Nano. She's a software gal more than hardware, so she asked me for advice and I provided a circuit I'd recommend for her needs.
+I haven't done a [circuit analysis](/posts/Night-Light/) in a while, and a friend of mine was working on a project to control a handful of 12v devices with an Arduino Nano. She's a software gal more than hardware, so she asked me for advice and I provided a circuit I'd recommend for her needs.
 
 ## Circuit Overview
 
-Here is the full circuit, or at least the basic parts for it to work but without any extras. There's an Arduino (or really any microcontroller or digital logic) on the left and the load on the right. In this case, the load is a simple light bulb but the circuit can easily handle any DC load as long as the voltage and current are in range for the MOSTFET and optocoupler.
+Here is the full circuit, or at least the basic parts for it to work but without any extras. There's an Arduino (or really any microcontroller or digital logic) on the left and the load on the right. In this case, the load is a simple light bulb but the circuit can easily handle any DC load as long as the voltage and current are in range for the MOSFET and optocoupler.
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
@@ -69,7 +69,7 @@ With both components in place, the complete circuit operates as a two-stage swit
 
 ## But Can We Go Further?
 
-What we have a is very functional circuit. It meets the design criteria just fine, and if I were a teacher and got this circuit from a student I'd give them 100%.
+What we have is a very functional circuit. It meets the design criteria just fine, and if I were a teacher and got this circuit from a student I'd give them 100%.
 
 ...but if I were a manager and an engineer gave me this circuit I'd ask if they were serious.
 
@@ -116,7 +116,7 @@ The other risk to your 12v supply would be a load that draws too much current fo
 
 This is where it gets a bit complicated, but this last mitigation is one of the best you can do and costs nothing, because it is a matter of wiring. In all the schematics up to this point, we've shown a single Ground symbol. This is because the CircuitJS simulator I use for interactive circuits does not support multiple grounds.
 
-In practice, multiple grounds are extremely useful. Astute readers will have probably noticed already that the optocoupler isolates the Arduino side from the 12v side, but the isolation is broken by both sides sharing a Ground. These is a number of scenarios where the Ground could be brought to a high voltage, such as a short circuit from a loose wire, a lightning strike, ESD, the list goes on. Even beyond those scenarios, the switching of current and back-EMF and other abrupt shanges in current to Ground create electrical noise that could be enough to effect the Arduino's microcontroller and trigger strange, erratic behaviors.
+In practice, multiple grounds are extremely useful. Astute readers will have probably noticed already that the optocoupler isolates the Arduino side from the 12v side, but the isolation is broken by both sides sharing a Ground. There are a number of scenarios where the Ground could be brought to a high voltage, such as a short circuit from a loose wire, a lightning strike, ESD, the list goes on. Even beyond those scenarios, the switching of current and back-EMF and other abrupt changes in current to Ground create electrical noise that could be enough to affect the Arduino's microcontroller and trigger strange, erratic behaviors.
 
 Since the Arduino's 5v and the load's 12v are both being provided externally, they can both have their own independent grounds. A Digital Ground and a 12v Ground, divided at the optocoupler, will ensure there is no risk of activity from the 12v side damaging anything on the Arduino side.
 

@@ -2,7 +2,7 @@
 title: Vibe Coding - Brave New World
 description: Lessons learned with the hot new methodology
 categories: [Projects, Programming]
-tags: [AI]
+tags: [AI, vibe-coding, cursor]
 mermaid: true
 meta_description: "Discover the future of programming with Vibe Coding. Learn how AI coding assistants like Cursor are transforming software development, with real-world examples and practical tips for developers."
 keywords: "vibe coding, AI programming, Cursor IDE, AI coding assistant, software development, programming tools, AI pair programming, developer productivity"
@@ -27,7 +27,7 @@ Now, it has been a few weeks since then and I have been using Cursor daily throu
 
 ## Conclusion: AI Agents are Flawed
 
-AI agents make mistakes. They do dumb things and fail at common sense. The catch is that this is true of humans too. Where Cursor failed in terms of competency it made up for in speed. I have been having Cursor add comments and other documentation to all my projects, and every now and then it misunderstands how some code is designed and I make some edits to the documentation. Of course, it takes 5 minutes to review and edit that documentation that would have taken me a whole day to write in the first place. A whole day of tedious, demoralizing busy-work, completely avoid thanks to my digital intern that handles that for me now. The same goes for code and to some extent debugging. It isn't perfect but there's a lot of value there. The trick is to understand the limitations and work with them.
+AI agents make mistakes. They do dumb things and fail at common sense. The catch is that this is true of humans too. Where Cursor failed in terms of competency it made up for in speed. I have been having Cursor add comments and other documentation to all my projects, and every now and then it misunderstands how some code is designed and I make some edits to the documentation. Of course, it takes 5 minutes to review and edit that documentation that would have taken me a whole day to write in the first place. A whole day of tedious, demoralizing busy-work, completely avoided thanks to my digital intern that handles that for me now. The same goes for code and to some extent debugging. It isn't perfect but there's a lot of value there. The trick is to understand the limitations and work with them.
 
 ## I'm a Project Manager
 
@@ -38,6 +38,9 @@ My first attempt at vibe coding was a bit rough because I told the agent to do a
 ## Guidelines for Managing AI
 
 Based on my experience so far, I've made a few notes on techniques that may help you get the most out of your vibe coding.
+
+> **Update:** After months of daily use, I expanded these early notes into a full five-phase workflow. See [Effective Vibe Coding - A Practical Guide](/posts/Effective-Vibe-Coding/).
+{: .prompt-info }
 
 ### Start with documentation
 
@@ -57,7 +60,7 @@ AI agents get smarter with context, and documentation is part of that. Comments 
 
 > _Vibe coding is a crutch to avoid having to learn programming! It is making people worse programmers!_
 
-Thank you, Mr. Strawman. I'm going to be honest, I sort of agree. Vibe coding is a crutch just like my DIY AI knowledgebase assistant is a crutch to assist with my poor memory, or Microsoft Word was a crutch to assist with my father's dyslexia. Crutches are _good_. Crutches _help people_. Yes, it'd be better if people never needed crutches but in the real world some people do.
+Thank you, Mr. Strawman. I'm going to be honest, I sort of agree. Vibe coding is a crutch just like my [DIY AI knowledgebase assistant](/posts/AI-As-Assistive-Technology/) is a crutch to assist with my poor memory, or Microsoft Word was a crutch to assist with my father's dyslexia. Crutches are _good_. Crutches _help people_. Yes, it'd be better if people never needed crutches but in the real world some people do.
 
 Frankly, I am not a great programmer. I am competent. I can write code. I have written code for decades, in a dozen languages, and for twice as many platforms. But at the end of the day programming is a means to an end. I want a computer to do something, I don't especially care how. I already know how to program and make time to learn new techniques and languages for the sake of learning, but I don't want that to stand between me and my goals. By avoiding things like analysis paralysis, the tedium of writing documentation, or the frustration of configuring CI/CD, I can focus on the higher level tasks and keep moving toward my goals.
 

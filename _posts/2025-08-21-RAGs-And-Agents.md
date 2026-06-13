@@ -78,7 +78,7 @@ The magic of RAG happens in the search phase, which relies on [vector databases]
 
 #### Text Vectorization Process
 
-Vector databases work by converting text into high-dimensional numerical representations using [embedding models](https://en.wikipedia.org/wiki/Word_embedding). These embeddings capture semantic meaning—similar concepts end up close together in vector space, even if they use different words.
+Vector databases work by converting text into high-dimensional numerical representations using [embedding models](https://en.wikipedia.org/wiki/Word_embedding). These embeddings capture semantic meaning—similar concepts end up close together in vector space, even if they use different words. (I dig into how this works in much more detail in my [post on embeddings](/posts/Embeddings/).)
 
 ```pseudocode
 function createEmbedding(text):
@@ -150,7 +150,7 @@ I've built several agent implementations in VulcanAI, from simple Discord bots t
 
 ### Action Models and Tool Integration
 
-Agent frameworks give LLMs the ability to perform a wide range of actions. For example, an agent might interact with a database to query or update records, access the file system to read documents or create directories, connect to external APIs for services like weather or email, execute code to process data or generate visualizations, or even control hardware in robotics projects like my Mite robot.
+Agent frameworks give LLMs the ability to perform a wide range of actions. For example, an agent might interact with a database to query or update records, access the file system to read documents or create directories, connect to external APIs for services like weather or email, execute code to process data or generate visualizations, or even control hardware in robotics projects like my [Mite robot](/posts/Robot/).
 
 The LLM learns to use these tools by seeing examples during training or through carefully crafted prompts that describe when and how to use each tool. Modern frameworks like [LangChain](https://langchain.readthedocs.io/) and [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) provide extensive libraries of pre-built tools.
 

@@ -2,7 +2,7 @@
 title: Boolean Algebra and Karnaugh Maps - The Art of Logic Simplification
 description: From truth tables to hardware optimization, exploring how Boolean algebra and Karnaugh maps minimize digital logic for faster circuits and cleaner algorithms
 categories: [Programming]
-tags: [logic-design, digital-circuits, optimization, hardware, fpga]
+tags: [logic-design, digital-circuits, optimization, hardware, fpga, boolean-algebra, karnaugh-maps]
 math: true
 mermaid: true
 meta_description: "A comprehensive guide to Boolean algebra reduction using Karnaugh maps, covering applications in hardware design, FPGA optimization, and algorithmic efficiency."
@@ -84,7 +84,7 @@ These manipulation rules become crucial when you're trying to minimize logic gat
 
 ### De Morgan's Laws: The Great Converters
 
-De Morgan's laws are probably the most practically useful laws in Boolean algebra: $\overline{A + B} = \overline{A} \cdot \overline{B}$ and $\overline{A \cdot B} = \overline{A} + \overline{B}$. These laws let you convert between AND and OR operations, which is incredibly useful when you're trying to implement logic using only NAND or NOR gates (which are often cheaper and faster in hardware).
+De Morgan's laws are probably the most practically useful laws in Boolean algebra: $\overline{A + B} = \overline{A} \cdot \overline{B}$ and $\overline{A \cdot B} = \overline{A} + \overline{B}$. These laws let you convert between AND and OR operations, which is incredibly useful when you're trying to implement logic using only NAND or NOR gates (which are often cheaper and faster in hardware, as I explore in [Logic Gates - Boolean Algebra Made Physical](/posts/Logic-Gates/)).
 
 I use De Morgan's laws constantly when optimizing the conditional logic in my [particle simulation](https://stevengann.com/posts/Particle-Sim/). Converting complex nested conditionals into their complement forms often reveals opportunities for optimization that aren't obvious in the original form.
 

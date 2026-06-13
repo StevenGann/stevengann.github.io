@@ -2,7 +2,7 @@
 title: Particle Simulation
 description: Exploring Data Oriented Design through a high-performance particle simulation. Learn how restructuring data around access patterns rather than objects can unlock 3-5x performance improvements and handle thousands of particles at 60 FPS.
 categories: [Projects, Programming]
-tags: [performance, simulation, multithreading, optimization]
+tags: [performance, simulation, multithreading, optimization, csharp, data-oriented-design]
 math: true
 mermaid: true
 ---

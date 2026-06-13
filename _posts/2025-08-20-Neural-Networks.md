@@ -134,7 +134,7 @@ The weights on connections are what the network learns during training. They det
 
 ## Training a Neural Network: Making the Artificial Brain Learn
 
-The weights between neurons is where the magic is. They encode the information and patterns in ways that are not intuitive, and attempting to set those weights manually is impractical or impossible so you need to some up with some method of training the network's weights. Training neural networks is fundamentally an optimization problem, and we can apply the techniques from my [ML Foundations post](https://stevengann.com/posts/ML-Foundations/).
+The weights between neurons is where the magic is. They encode the information and patterns in ways that are not intuitive, and attempting to set those weights manually is impractical or impossible so you need to come up with some method of training the network's weights. Training neural networks is fundamentally an optimization problem, and we can apply the techniques from my [ML Foundations post](https://stevengann.com/posts/ML-Foundations/).
 
 ### Finding the Best Weights: Optimization Strategies
 
@@ -409,4 +409,4 @@ The key insight is that neural networks aren't replacing classical techniques; t
 
 ---
 
-*Next in this series: We'll explore practical applications of neural networks, including Retrieval-Augmented Generation (RAG) systems and AI agents that combine multiple AI techniques to solve complex real-world problems.*
+*Next in this series: We'll explore [practical applications of neural networks, including Retrieval-Augmented Generation (RAG) systems and AI agents](/posts/RAGs-And-Agents/) that combine multiple AI techniques to solve complex real-world problems.*

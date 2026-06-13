@@ -2,7 +2,7 @@
 title: Homelab Lessons 3 - Rise of Hyperion
 description: Building up a Raspberry Pi cluster as a practical addition to my homelab
 categories: [Homelab]
-tags: [homelab, raspberry-pi, compute-cluster, poe, kubernetes]
+tags: [homelab, raspberry-pi, compute-cluster, poe, kubernetes, k3s, container-orchestration]
 mermaid: true
 ---
 
@@ -136,5 +136,8 @@ flowchart TB
 ## Conclusion
 
 With the hardware sorted, the Hyperion cluster is ready for the next phase: software configuration and deployment into the homelab. In the next post, I'll cover the OS setup, container orchestration, and how these 10 nodes will fit into the rest of my infrastructure as a Kubernetes-style cluster.
+
+> **Update:** The OS and orchestration phase teased here became a declarative NixOS + k3s build, abandoning the original golden-image approach. See [Homelab Lessons 4 - Hyperion Takes Flight](/posts/Hyperion-Takes-Flight/).
+{: .prompt-info }
 
 If you're curious how this all fits into the bigger picture, you can read the earlier parts of this series: [Homelab Lessons 1 - The Road To Homelab](/posts/Homelab-Lessons-1/) and [Homelab Lessons 2 - My Little Kingdom](/posts/Homelab-Lessons-2/).

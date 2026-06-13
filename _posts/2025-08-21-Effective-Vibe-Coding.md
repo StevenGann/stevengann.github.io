@@ -2,7 +2,7 @@
 title: Effective Vibe Coding - A Practical Guide
 description: Lessons learned from months of AI-assisted development and how to maximize productivity while maintaining code quality
 categories: [Programming, AI]
-tags: [AI]
+tags: [AI, vibe-coding, ai-assisted-development, test-driven-development, developer-workflow]
 mermaid: true
 meta_description: "A comprehensive guide to effective AI-assisted coding, covering best practices, workflow strategies, and lessons learned from real-world development projects."
 keywords: "vibe coding, AI programming, AI coding assistant, software development, programming productivity, AI workflow, code quality, developer tools"
@@ -12,9 +12,9 @@ After several months of daily AI-assisted development across multiple projects, 
 
 ### Disclaimer:
 
-In this article, I am presenting my opinions and practices based on my personal experiencs with Cursor, Github Copilot, and other AI coding tools. There is no objective "right way," and what matters is finding a methodology that works for you and meets your needs.
+In this article, I am presenting my opinions and practices based on my personal experiences with Cursor, Github Copilot, and other AI coding tools. There is no objective "right way," and what matters is finding a methodology that works for you and meets your needs.
 
-I am also oversimplify and personifying AI agents quite a bit. It is important to understand how these agents actually work to understand their strengths and weaknesses, but that is beyond the scope of this article. I recommend my recent post [about AI agents](https://stevengann.com/posts/RAGs-And-Agents/) as a starting point for more information.
+I am also oversimplifying and personifying AI agents quite a bit. It is important to understand how these agents actually work to understand their strengths and weaknesses, but that is beyond the scope of this article. I recommend my recent post [about AI agents](https://stevengann.com/posts/RAGs-And-Agents/) as a starting point for more information.
 
 ## What AI Coding Agents Are and Aren't
 

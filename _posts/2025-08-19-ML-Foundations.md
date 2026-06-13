@@ -364,4 +364,4 @@ The current AI boom is exciting, but it's built on decades of foundational work.
 
 ---
 
-*Next in this series: We'll explore how these foundational concepts evolved into statistical learning methods and early machine learning algorithms, setting the stage for the neural network revolution that dominates today's AI landscape.*
+*Next in this series: We'll explore how these foundational concepts evolved into statistical learning methods and early machine learning algorithms, setting the stage for the [neural network revolution](/posts/Neural-Networks/) that dominates today's AI landscape.*

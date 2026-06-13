@@ -10,7 +10,7 @@ mermaid: true
 
 In my [previous homelab post](https://stevengann.com/posts/Homelab-Lessons-2/), I walked through the current state of my homelab infrastructure, including the Monolith server that runs [Jellyfin](https://jellyfin.org/) for streaming media to my family. One thing I mentioned wanting was better notifications. Specifically, a way to let everyone know when new content gets added to the library and to alert me when something goes wrong. Enter MonolithBot.
 
-I've built simple Discord bots before, but usually in C# (my favorite [golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument)) and usually with the most basic of API features: responding to text messages, maybe posting to a channel. I'd never done rich embeds with images and metadata, or the newer slash commands that is standard practice on Discord bots now. This project was an opportunity to try something different.
+I've built simple Discord bots before, but usually in C# (my favorite [golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument)) and usually with the most basic of API features: responding to text messages, maybe posting to a channel. I'd never done rich embeds with images and metadata, or the newer slash commands that are standard practice on Discord bots now. This project was an opportunity to try something different.
 
 ## Why Python?
 
@@ -52,6 +52,9 @@ flowchart LR
 ```
 
 The bot runs as its own Docker container alongside Jellyfin and the other services on the Monolith. It talks to Jellyfin's API to fetch content and health status, then posts to Discord channels as needed.
+
+> **Update:** The homelab was later consolidated into a 42U rack and hosts were renamed under a mythological scheme, so the "Monolith" server no longer carries that name. See [Homelab Lessons 5 - Into the Rack](/posts/Into-The-Rack/).
+{: .prompt-info }
 
 ### Internal Structure
 
