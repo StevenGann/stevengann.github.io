@@ -10,6 +10,9 @@ mermaid: true
 
 [Last week]({% post_url 2026-08-03-Boba-Island-Dev-Log-1 %}) I mentioned the terrain system I was working on, but glossed over it because it was interesting enough to warrant its own post, and now here we are. Good thing, because the terrain system evolved a lot in the past week.
 
+![The whole island from offshore, in the map editor. Four days down a rabbit hole, and the panel on the right is every tool that came out of it.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/end-result.jpg)
+_The whole island from offshore, in the map editor. Four days down a rabbit hole, and the panel on the right is every tool that came out of it._
+
 ## Where the idea came from
 
 The thing that put me onto this was a video: [_How One Guy FIXED Procedural Generation_](https://www.youtube.com/watch?v=Y19Mw5YsgjI) by Game Dev Buddies, about Oskar Stålberg and [_Townscaper_](https://en.wikipedia.org/wiki/Townscaper), his little town-building toy. If you've played it you know the thing I mean: you click, a house appears, and the streets that emerge are wonky and organic and read as a real Mediterranean hill town. But the whole thing is still a grid underneath, and you can absolutely feel that you're placing tiles.
@@ -29,6 +32,9 @@ That knob matters more than it looks like it should. At one quad per base cell, 
 Then every vertex gets jittered (pushed off its ideal position by a random offset) and the whole lattice gets relaxed.
 
 The relaxation is the part I ported most directly from the talk. For each four-sided cell you rotate its corners about the cell's center so all four land on top of each other, average them, and rotate them back out. That average *is* the best-fit square for that cell. Every vertex then moves a fraction of the way toward the average of what all its cells want. Plain [Laplacian smoothing](https://en.wikipedia.org/wiki/Laplacian_smoothing) would just blur the noise; this actually makes the *cells* well-formed, which is what "relaxed" means and what jitter alone can never give you.
+
+![One hexagon, outlined in gold, sitting on the relaxed lattice it's made of. Regular enough to snap things to, irregular enough that your eye stops seeing a lattice.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/the-lattice.jpg)
+_One hexagon, outlined in gold, sitting on the relaxed lattice it's made of. Regular enough to snap things to, irregular enough that your eye stops seeing a lattice._
 
 ### The thing the technique doesn't tell you
 
@@ -114,6 +120,9 @@ The island is terraced. That was an early call and it has paid for itself about 
 
 Two hexagons that disagree about their level is a cliff. The wall between them is geometry generated from the two hexagons' own copies of their shared border vertices. Two that agree is a smooth seam and the mesh just welds. There's no cliff object, no cliff flag, no cliff authoring step. Disagreement is the cliff.
 
+![Terraces stepping down to the beach. Every riser here is two hexagons disagreeing about their level, and every flat run between them is two that agree.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/terraces-cliffs.jpg)
+_Terraces stepping down to the beach. Every riser here is two hexagons disagreeing about their level, and every flat run between them is two that agree._
+
 Storing height as an integer level instead of a float has one specific virtue: **an unwalkable step is unrepresentable rather than merely forbidden.** Godot bakes navigation meshes on a voxel grid, and at the cell height this project uses, a riser has to be at or under 0.25 m or at or over 0.35 m, and *never* 0.30 m. At 0.30 m, whether villagers can walk up it depends on what solid geometry happens to sit under the tread. With a float height that's a tuning hazard forever. With `level × 0.25` it isn't a rule anyone has to remember. You can't type it. This is the same move I ended up at in [_27 Survivors_]({% post_url 2026-08-02-27-Survivors-Postmortem %}), where three architectures of careful monster-versus-light logic lost to giving the light a collider and letting the physics engine refuse the illegal state outright.
 
 Slopes exist as the exception, stored sparsely as six per-corner levels for the hexes that need them. The two editing gestures are that split made physical: the plain scroll wheel moves a whole hexagon so it *steps* against its neighbors and a cliff appears; ctrl+wheel moves one shared corner in every hexagon that touches it, so they stay in agreement and the seam stays smooth.
@@ -153,6 +162,9 @@ flowchart TD
 ### Cliffs lean
 
 This one came out of just looking at the thing. Vertical risers everywhere read as extruded, like the island was cut with a cookie cutter. So now every rim vertex is displaced by a function of its position and its own height. The important part is that **the ground and the wall both call the same function.** Nothing is passed between them and nothing has to be kept in sync; they agree because they compute the same thing from the same two inputs.
+
+![A riser that leans out over its own base instead of standing vertical. The ground on top and the wall below are displaced by the same function, so the lip can't open a seam.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/cliff-leans.jpg)
+_A riser that leans out over its own base instead of standing vertical. The ground on top and the wall below are displaced by the same function, so the lip can't open a seam._
 
 It's the elevation model extended by exactly one word. Two hexagons always agree about *where* a boundary vertex is and may disagree about *how high*, and that disagreement is the cliff. Now they may also disagree about *where*, by the same mechanism. At a cliff the heights differ, so the offsets differ, and the wall spans the difference. That *is* the lean, and it's sealed at both ends by construction. At a smooth seam the heights agree, the offsets agree, and the hexes stay welded exactly as before.
 
@@ -198,6 +210,9 @@ Then the trick, which I'm pleased with: **the shader doesn't blend the colors, i
 
 Two reasons that's better than a gradient. Nothing is ever averaged, so nothing goes muddy. A straight `mix()` between two swatches produces a midpoint color belonging to neither material, which is worse than a hard line. And the edge stays categorical at every single pixel, so what softens is the *render*, never the data. The authored value is still an exact integer per quad. It just softens into an interlocking contour instead of a fade.
 
+![Grass into sand, straight down, with the wireframe switched on. Nothing here is a gradient: every fragment picks one material or the other, and what varies across the band is how many of them pick which.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/material-blending.jpg)
+_Grass into sand, straight down, with the wireframe switched on. Nothing here is a gradient: every fragment picks one material or the other, and what varies across the band is how many of them pick which._
+
 Note that the two material slots never reach the comparison. Only the weight does:
 
 ```mermaid
@@ -236,6 +251,9 @@ The reference I wanted to hit was the classic depth-buffer toon water: see-throu
 
 The fix was to change the geometry rather than the shader. The shore lip now snaps one terrace *under* the waterline instead of flush with it, and ocean hexes get a real terraced seabed that falls away from the coast. That one change makes shallows, the depth ramp, and intersection foam all fall out of a single mechanism, and it turns the waterline into a genuine intersection instead of two coplanar surfaces butted against each other.
 
+![Shallows, the shallow-to-deep color ramp, and foam along the waterline. All three read the depth buffer, and all three measured exactly nothing until there was a seabed behind the water instead of beside it.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/ocean-shader.jpg)
+_Shallows, the shallow-to-deep color ramp, and foam along the waterline. All three read the depth buffer, and all three measured exactly nothing until there was a seabed behind the water instead of beside it._
+
 Both versions run the identical shader. The only thing that changed is whether the ray has anything to hit:
 
 ```mermaid
@@ -269,6 +287,9 @@ The beach, by the way, is generated, not painted, and it's the one place I let t
 ## Tall grass
 
 The most recent thing, and the one that changed how the island reads more than anything else on this list.
+
+![Grass across the terraces with a painted sand path running through it. The flat green bars along the cliff rims are the rim growth, further down this section, still in placeholder form.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/tall-grass.jpg)
+_Grass across the terraces with a painted sand path running through it. The flat green bars along the cliff rims are the rim growth, further down this section, still in placeholder form._
 
 The inspiration here is a specific shader: [Stylized grass with wind and deformation](https://godotshaders.com/shader/stylized-grass-with-wind-and-deformation/) on godotshaders.com, MIT-licensed, written for Godot 3.2. I didn't port it; I read it line by line and rebuilt it, keeping the mechanisms and dropping the parts that don't fit this project.
 
@@ -332,6 +353,9 @@ The last piece is scatter: trees, rocks, the stuff that makes a hillside a place
 The rule the whole thing is built around: **the brush is an input device, not a generator.** The dice are rolled while you're painting, and only the *outcome* is ever stored. There is no seed anywhere in the map, and there is no re-roll button. That distinction is the entire difference between "I placed these trees" and "the computer placed these trees and I can't argue with it."
 
 The stored record is an integer address: which quad, plus a sub-cell offset, a rotation, and a scale. About six bytes. Notably it does *not* store a height, or a transform. A prop's position in the world is a pure function of the map, the lattice, and the record, computed at build time. Which means: raise a hexagon and its trees rise with it. Re-relax the lattice and they move with the ground. Flood a hexagon to ocean and it *keeps* its props, ready for when you flood it back. There's no stale value anywhere, because there's no stored value to go stale.
+
+![Boulders brushed along the shoreline, trees and shrubs up the terraces behind them. Each one is about six bytes on disk: which quad, an offset, a rotation, a scale, and never a position.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/props-scatter.jpg)
+_Boulders brushed along the shoreline, trees and shrubs up the terraces behind them. Each one is about six bytes on disk: which quad, an offset, a rotation, a scale, and never a position._
 
 Three inputs, one arrow out, and nothing on the right-hand side ever written back:
 
@@ -408,6 +432,9 @@ What's left before I'd call terrain done: incremental rebuilds, so painting one 
 ## Done for now
 
 The funny thing is that after 4–5 days of working on nothing but terrain I had to force myself to stop and call it good enough, which, as I've written about [when I built a book nook for my mom]({% post_url 2026-02-21-BookNook %}), is very difficult for me to say. Nothing is ever perfect and I instinctively want to chase that perfection anyway. I had to put myself in the shoes of a past manager and declare it not worth more time to improve, because of diminishing returns versus real priorities. I've made it a goal to have a full Boba Island demo ready in time for the autumn 2026 NextFest on Steam, and the scope of that demo is the early game, so the terrain won't be anything more than backdrop.
+
+![Walk mode, at eye height, with the greybox player rig from the last dev log standing in the grass. This is the shot where I made myself stop.](/assets/img/2026-08-11-Boba-Island-Dev-Log-2/done-for-now.jpg)
+_Walk mode, at eye height, with the greybox player rig from the last dev log standing in the grass. This is the shot where I made myself stop._
 
 ## Actually useful progress
 
