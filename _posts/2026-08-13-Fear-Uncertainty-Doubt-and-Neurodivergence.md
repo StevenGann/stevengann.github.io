@@ -1,0 +1,42 @@
+---
+title: Fear, Uncertainty, Doubt, and Neurodivergence
+description: How public panic over wearable AI ends up taking assistive technology away from the people who need it most
+categories: [AI, Personal]
+tags: [neurodivergence, assistive-technology, ai, privacy, smart-glasses, memory, adhd, autism, accessibility, wearables]
+meta_description: "Fear, uncertainty, and doubt about AI smart glasses and facial recognition are killing features that neurodivergent people rely on. A personal account."
+keywords: "AI smart glasses, assistive technology, neurodivergent, facial recognition privacy, Meta Ray-Ban glasses, memory assistance, ADHD autism accessibility, wearable AI, FUD"
+---
+
+## A Very Special Post
+
+I did not start this blog to rant about the shortcomings of reality; I created it to discuss my projects, things I learn, and my thoughts on different topics. Today I feel like I need to get a specific message out into the world about my situation, the technology I've sought to help me overcome my limitations, and the frustration of that quest being stymied by the reactionary nature of the zeitgeist.
+
+## Hope you're wearing your best clothes
+
+I like to describe myself as "neurospicy," though the correct term is neurodivergent, with such dramatic diagnoses as Generalized Anxiety Disorder, Autism Spectrum Disorder, ADHD, and CPTSD. Hardly unique in the modern world, especially for an engineer in Silicon Valley. Combined with a head injury sustained during grad school, there are more than a few ways that I am cross-wired, and coping with all of it while maintaining my exceptionally high quality of work and professionalism has taken practice and effort. The effort has paid off with a career path I am quite proud of, but nonetheless it has been an ongoing quest for some years to obtain or develop some sort of technological advantage to compensate for my disadvantages, a quest I started eleven years ago with [PeopleDB](https://github.com/StevenGann/PeopleDB).
+
+## We never learn, we been here before
+
+I've talked about this before, when I discussed how [AI is serving me as an assistive technology]({% post_url 2026-02-05-AI-As-Assistive-Technology %}) by turning my personal database of notes into a highly informed assistant that helps me apply that information and recall what I need when I need it. There were other things happening at the time that I was not able to write about openly because of my employment at Meta, but I was eagerly awaiting the day when the technology I was testing internally would be publicly announced and I could write a blog post about how it is helping me lead a more normal life. After being laid off from Meta I lost access to that technology, but I was waiting patiently for the public release all the same. Unfortunately, following some very [sensationalist reporting](https://www.wired.com/story/meta-smart-glasses-face-recognition-nametag-connections/), I have now been informed that the technology will never be made public, and that internal testing has ceased as well.
+
+## It's a sign of the times
+
+Anyone who knows me knows I take privacy very seriously. I strongly encrypt everything, I keep archives of records on air-gapped systems, I treat any online device as potentially compromised, the whole schmear. My home network routes all connections through two or more VPNs, and all DNS requests go through a different VPN only after passing through two different filtering and analysis stages as well as a private DNS cache. And of course my dedication to data security is only surpassed by my distrust of corporations and my cynicism toward any closed-source, profit-motivated technology.
+
+Naturally, when Meta's AI-powered smart glasses were first launched, I was very skeptical and dismissive of them, calling them corporate spying devices and worse. When I started my job at Meta I had the unique opportunity to dig into their design files, source code, and internal documentation. What I found was a platform that was about as privacy-respecting as possible for what it did, and a responsible system of opt-in, opt-out, and double checks to avoid people using the glasses maliciously. Most of the realtime AI features used tiny models running on the phone itself, only making API calls to external servers when necessary for what it was asked to do. Assured that the glasses weren't the corporate surveillance tool I had assumed them to be, I was happy to get a pair and sign up for experimental features as part of Meta's famous "dogfooding" internal testing program.
+
+Of all the interesting features I got to test, the realtime observations were my favorite and the most useful. The technology worked by taking a picture every 10 seconds and using local AI to write a description of what it saw. The picture was immediately discarded, but the written description was stored on the phone, and periodically those descriptions were collected into summarized notes with an abstract illustration. This was a massive boon for me, because at the end of each day I could review those AI-generated notes about where I was and what I did at different times, and that was enough to jog my memory so I could capture the details. I was so thrilled with the help this technology was providing that I wrote a feedback post explaining how wonderful it was to have a more normal memory at the end of the day. I added a request more specific to what I'd always wished for and had tried to build myself: facial recognition that would help me recall who I was speaking to, and conversation transcription so I could reread in-person conversations and recapture details that hadn't stuck in my hippocampus. I was informed something like that was in development, and I eagerly awaited the results.
+
+## You can't bribe the door on your way to the sky
+
+I get it. I really do. I see both sides of the issue. Before I had access to privileged information I was extremely distrustful and cynical about Meta's glasses, as I am about any closed-source technology. I can't fault people for hearing about glasses silently taking pictures and running facial recognition and getting spooked, because the reasonable assumption is that those pictures and that facial recognition data are all going to the cloud, where they will be used for invasive marketing at best. The problem is that this FUD ends up hurting people like me who stand to benefit from the technology.
+
+In 2012, self-proclaimed cyborg Steve Mann (no relation) was [assaulted by a McDonald's manager](https://www.nbcnews.com/tech/tech-news/cyborg-steve-mann-details-alleged-mcdonald-s-assault-flna889595) who attempted to rip his cranial implant out of his skull. The behavior was a normal if disappointing response to FUD. In 2012 the presence of small cameras everywhere was becoming a major problem thanks to the rise of smartphones, and seeing someone with a camera in their glasses pointed at you is alarming when you're already afraid and unsure of the situation. As my favorite movie quote goes, "People are dumb, panicky, dangerous animals and you know it." This is the way the majority of humans are wired for survival and social behavior. People who aren't neurodivergent. People who are not coping with the same limitations and don't automatically understand what it feels like to have the crutch they've always searched for demonized in the arena of public opinion.
+
+## Conclusion
+
+Again, I'm not here to say people need to trust cameras pointed at them without their consent. I will laud healthy distrust and skepticism. I don't have a real answer for the problem, because somehow we need to find a way to materialize these assistive technologies for the neurodivergent and differently abled without compromising the privacy or security of those around us.
+
+All I am trying to say is that it is frustrating in ways I don't see people talking about. Even some of my closest friends don't understand why it bothers me, or why I feel I need this kind of technology in order to lead a more normal life. A less confusing, less embarrassing, more comfortable life. The only way to make people understand is to talk about it. Bring the other side of the issue into public discourse. I'm not the sort of genius who can solve this sort of problem alone, but we as a society can if we keep striving to understand each other and respect each other.
+
+I'd also like to apologize for the cheesy subtitles; I've had that song stuck in my head since I watched _Project Hail Mary_.
