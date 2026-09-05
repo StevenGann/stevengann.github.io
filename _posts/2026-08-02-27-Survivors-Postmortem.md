@@ -271,3 +271,8 @@ Thanks are owed: to Dal Deem for the graphic design, to Captain Pepper for lendi
 I also got the thing I actually came for. I started this with a knot in my chest over a decision made somewhere far above me, and I finished it with a shipped game, a store page, and a room full of people at a convention playing it. None of them had any idea what was underneath it, and none of them needed to. Making the helplessness into something with rules, and a shape, and an ending you can reach is a real trick, and it works on the person building it at least as well as on the person playing it. Recommended, if you've got four months.
 
 **[27 Survivors is on Steam.](https://store.steampowered.com/app/4773130/27_Survivors/)** There are 27 people left. Try to do better than I usually do.
+
+> **AI Disclosure:** Unlike most of my blog, this post was mostly drafted by an AI agent based on all of the notes and git history that had been accumulated over the course of the project, and the draft was manually rewritten for clarity and accuracy. I did this because I do not believe it undermines the value of the post because it serves to communicate the journey that was involved in developing the game. Also, I believe an AI agent generating the postmortem based on the historical record of the project is likely more objective than I could be.
+> 
+> This post is an exception to the rule. For everything else, see my [AI policy]({% link _tabs/ai-policy.md %}).
+{: .prompt-info }
