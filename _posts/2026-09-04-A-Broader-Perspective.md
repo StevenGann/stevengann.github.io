@@ -42,15 +42,19 @@ But does it?
 
 Like intelligence, [the definition of life](https://en.wikipedia.org/wiki/Definition_of_life) has expanded a lot with scientific study. Life can [exist outside of sunlight](https://en.wikipedia.org/wiki/Hydrothermal_vent) and in [conditions previously thought impossible](https://en.wikipedia.org/wiki/Extremophile). A whole slew of [hypothetical biochemistries](https://en.wikipedia.org/wiki/Hypothetical_types_of_biochemistry) have been proposed based on our expanding knowledge of chemistry, challenging the assumption that all life would have to be based on water, carbon, and phosphorus.
 
-![Captain Kirk, seen from behind in his gold command shirt, standing in a mine tunnel facing the Horta: a low, spreading mass of molten-looking orange and brown rock. Round silicon nodules lie scattered across the cave floor around them](/assets/img/2026-09-04-A-Broader-Perspective/devil-in-the-dark-horta.jpg)
+![Captain Kirk, seen from behind in his gold command shirt, standing in a mine tunnel facing the Horta: a low, spreading mass of molten-looking orange and brown rock. Round silicon nodules lie scattered across the cave floor around them](/assets/img/2026-09-04-A-Broader-Perspective/devil-in-the-dark-horta.jpg){: width="363" height="274" .left}
 _Kirk face to face with the Horta. The nodules strewn across the floor are her eggs, which the miners of Janus VI had been smashing by the thousand as worthless rock. Screen capture from "The Devil in the Dark," Star Trek (1967), © Paramount Global._
 
 In 1967, an episode of _Star Trek_ visited this concept, long before most of the scientific advancements listed above were made. In [_The Devil in the Dark_](https://en.wikipedia.org/wiki/The_Devil_in_the_Dark), the writers proposed a scenario where humans encountered intelligent life in space that was so alien to their experiences that it was initially not recognized as life, and took even longer to be recognized as intelligent. As Mr. Spock put it: "at least, no life as we know it."
 
-![A painting of Pluto's surface: pale drifts of ice under a black sky, with the Sun reduced to a single brilliant four-pointed star. Spiky blue crystalline creatures sit on the ground like sea urchins, and one is caught in mid-leap, arcing high above the horizon on a long vapor trail](/assets/img/2026-09-04-A-Broader-Perspective/plutonian-zistles-michael-whelan.jpg)
+<div style="clear: both;"></div>
+
+![A painting of Pluto's surface: pale drifts of ice under a black sky, with the Sun reduced to a single brilliant four-pointed star. Spiky blue crystalline creatures sit on the ground like sea urchins, and one is caught in mid-leap, arcing high above the horizon on a long vapor trail](/assets/img/2026-09-04-A-Broader-Perspective/plutonian-zistles-michael-whelan.jpg){: width="212" height="500" .right}
 _Michael Whelan's Plutonian zistles, painted for the National Geographic Picture Atlas of Our Universe (1980). The book has them springing twenty meters in Pluto's feeble gravity and spending most of their time radioing great thoughts to each other, and it notes that they consider Pluto the only planet with life, since everywhere else is far too hot. Art © 1980 [Michael Whelan](https://www.michaelwhelan.com/galleries/our-universe-plutonian-zistles/)._
 
 As a kid, I had a copy of [_Our Universe_ by Roy Gallant](https://archive.org/details/nationalgeograph00gall), and a brief "what if" section had a few pages of fanciful imaginings of what life could be like on other planets in our solar system. The [creatures of Pluto](https://www.michaelwhelan.com/galleries/our-universe-plutonian-zistles/) were described as crystalline creatures that derive energy from radiation, hop around in Pluto's low gravity, and are highly intelligent thanks to electrical signals moving through their silicon crystal bodies at extremely low temperatures. The idea that a life form could be completely unlike anything in Earth's biology captured my imagination and has stuck with me since.
+
+<div style="clear: both;"></div>
 
 ## The Play Is The Thing
 
